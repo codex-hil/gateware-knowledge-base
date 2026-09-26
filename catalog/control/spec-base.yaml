@@ -1,0 +1,129 @@
+schema_version: 1
+kind: ip
+id: spec-base
+name: spec-base
+project: spec
+upstream_path: hdl/rtl/spec_base_wr.vhd
+summary: SPEC carrier gateware base integration.
+category: control
+tags:
+- SPEC
+- PCIe
+- Wishbone
+language:
+- VHDL
+license:
+  expression: CERN-OHL-W-2.0+
+  scope: Selected source file; dependencies and generated outputs may differ.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://gitlab.com/ohwr/project/spec/-/blob/5200746001154f8b8ed75f62b71e89086ffd9b7e/hdl/rtl/spec_base_wr.vhd
+    revision: 5200746001154f8b8ed75f62b71e89086ffd9b7e
+    accessed: '2026-09-26'
+    scope: hdl/rtl/spec_base_wr.vhd
+    details: Inspected source API, imports/dependencies and implementation structure; not executed.
+interfaces:
+- sample/control
+- PCIe
+- Wishbone
+fpga_families: []
+toolchains: []
+reuse_scope: platform
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source-level API and integration reviewed; completeness for a specific application remains
+    unqualified.
+  evidence:
+  - *id001
+documentation:
+  status: present
+  summary: Source API and repository documentation available; inspect linked parameters and dependencies
+    before reuse.
+  evidence:
+  - type: source_inspection
+    url: https://gitlab.com/ohwr/project/spec/-/blob/5200746001154f8b8ed75f62b71e89086ffd9b7e/README.rst
+    revision: 5200746001154f8b8ed75f62b71e89086ffd9b7e
+    accessed: '2026-09-26'
+    scope: README.rst
+    details: Documentation/source API reviewed; no numerical quality score assigned.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_testbench:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  self_checking_testbench:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_ci:
+    status: present
+    summary: CI configuration exists; job success and per-block coverage not established.
+    evidence:
+    - type: source_inspection
+      url: https://gitlab.com/ohwr/project/spec/-/blob/5200746001154f8b8ed75f62b71e89086ffd9b7e/.gitlab-ci.yml
+      revision: 5200746001154f8b8ed75f62b71e89086ffd9b7e
+      accessed: '2026-09-26'
+      scope: project CI configuration, not a per-core result
+      details: Workflow/configuration inspected. Presence does not mean a successful CI run.
+  synthesis:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+verification_frameworks: []
+limitations: []
+our_usage: []
+rejected_for: []
+selection:
+  status: reference_only
+  reason: Integration/architecture reference; constraints require review before reuse.
+  evidence:
+  - type: our_review
+    url: https://gitlab.com/ohwr/project/spec/-/blob/5200746001154f8b8ed75f62b71e89086ffd9b7e/hdl/rtl/spec_base_wr.vhd
+    revision: 5200746001154f8b8ed75f62b71e89086ffd9b7e
+    accessed: '2026-09-26'
+    scope: hdl/rtl/spec_base_wr.vhd
+    details: Integration/architecture reference; constraints require review before reuse.
+reviewed_at: '2026-09-26'

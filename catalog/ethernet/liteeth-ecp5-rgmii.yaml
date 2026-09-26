@@ -1,0 +1,157 @@
+schema_version: 1
+kind: ip
+id: liteeth-ecp5-rgmii
+name: liteeth-ecp5-rgmii
+project: liteeth
+upstream_path: liteeth/phy/ecp5rgmii.py
+summary: ECP5 DDR-I/O RGMII PHY interface.
+category: ethernet
+tags:
+- ethernet
+- RGMII
+- ECP5
+language:
+- Python/Migen
+license:
+  expression: BSD-2-Clause
+  scope: Selected source file; dependencies and generated outputs may differ.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://github.com/enjoy-digital/liteeth/blob/85901f7f8bb8c3a52b3b8fbd4ee56947da3a6a99/liteeth/phy/ecp5rgmii.py
+    revision: 85901f7f8bb8c3a52b3b8fbd4ee56947da3a6a99
+    accessed: '2026-09-26'
+    scope: liteeth/phy/ecp5rgmii.py
+    details: Inspected source API, imports/dependencies and implementation structure; not executed.
+interfaces:
+- Ethernet packet stream
+- RGMII
+fpga_families:
+- name: ECP5
+  status: integration_present
+  scope: ECP5-specific DDR I/O instances in source.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/enjoy-digital/liteeth/blob/85901f7f8bb8c3a52b3b8fbd4ee56947da3a6a99/liteeth/phy/ecp5rgmii.py
+    revision: 85901f7f8bb8c3a52b3b8fbd4ee56947da3a6a99
+    accessed: '2026-09-26'
+    scope: liteeth/phy/ecp5rgmii.py
+    details: ECP5-specific DDR I/O instances in source.
+toolchains:
+- name: yosys-nextpnr
+  status: integration_present
+  scope: LiteX ECP5 build backend exists; this PHY was not synthesized in this review.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/enjoy-digital/litex/blob/b6ae9e0b227354aecffef5339d3e946f2395ac09/litex/build/lattice/trellis.py
+    revision: b6ae9e0b227354aecffef5339d3e946f2395ac09
+    accessed: '2026-09-26'
+    scope: litex/build/lattice/trellis.py
+    details: LiteX ECP5 build backend exists; this PHY was not synthesized in this review.
+reuse_scope: platform
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source-level API and integration reviewed; completeness for a specific application remains
+    unqualified.
+  evidence:
+  - *id001
+documentation:
+  status: present
+  summary: Source API and repository documentation available; inspect linked parameters and dependencies
+    before reuse.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/enjoy-digital/liteeth/blob/85901f7f8bb8c3a52b3b8fbd4ee56947da3a6a99/README.md
+    revision: 85901f7f8bb8c3a52b3b8fbd4ee56947da3a6a99
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Documentation/source API reviewed; no numerical quality score assigned.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_testbench:
+    status: present
+    summary: A matching upstream testbench exists; coverage is limited to its configurations.
+    evidence:
+    - &id002
+      type: source_inspection
+      url: https://github.com/enjoy-digital/liteeth/blob/85901f7f8bb8c3a52b3b8fbd4ee56947da3a6a99/test/test_ecp5rgmii.py
+      revision: 85901f7f8bb8c3a52b3b8fbd4ee56947da3a6a99
+      accessed: '2026-09-26'
+      scope: test/test_ecp5rgmii.py
+      details: Inspected testbench source; no simulation result collected.
+  self_checking_testbench:
+    status: present
+    summary: Assertions or result comparisons found in this testbench; not a pass result.
+    evidence:
+    - *id002
+  simulation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_ci:
+    status: present
+    summary: CI configuration exists; job success and per-block coverage not established.
+    evidence:
+    - type: source_inspection
+      url: https://github.com/enjoy-digital/liteeth/blob/85901f7f8bb8c3a52b3b8fbd4ee56947da3a6a99/.github/workflows/ci.yml
+      revision: 85901f7f8bb8c3a52b3b8fbd4ee56947da3a6a99
+      accessed: '2026-09-26'
+      scope: project CI configuration, not a per-core result
+      details: Workflow/configuration inspected. Presence does not mean a successful CI run.
+  synthesis:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+verification_frameworks:
+- Migen simulation
+limitations: []
+our_usage: []
+rejected_for: []
+selection:
+  status: reference_only
+  reason: Integration/architecture reference; constraints require review before reuse.
+  evidence:
+  - type: our_review
+    url: https://github.com/enjoy-digital/liteeth/blob/85901f7f8bb8c3a52b3b8fbd4ee56947da3a6a99/liteeth/phy/ecp5rgmii.py
+    revision: 85901f7f8bb8c3a52b3b8fbd4ee56947da3a6a99
+    accessed: '2026-09-26'
+    scope: liteeth/phy/ecp5rgmii.py
+    details: Integration/architecture reference; constraints require review before reuse.
+reviewed_at: '2026-09-26'

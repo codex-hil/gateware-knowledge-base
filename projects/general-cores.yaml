@@ -1,0 +1,117 @@
+schema_version: 1
+kind: project
+id: general-cores
+name: general-cores
+repository: https://gitlab.com/ohwr/project/general-cores
+aliases: []
+organization: CERN, GSI, CNPEM and OHWR contributors
+revision: 349b74a39a6aa37cf1112703fce89a9cc7682ddf
+inspected_at: '2026-09-26'
+inspection_scope: README/license review and selected individual source APIs, dependencies and verification
+  artifacts. No full code audit or HDL execution.
+license:
+  expression: LicenseRef-Mixed-OHWR
+  scope: Repository default or mixed-license summary; each IP record narrows the scope.
+  evidence:
+  - type: source_inspection
+    url: https://gitlab.com/ohwr/project/general-cores/-/blob/349b74a39a6aa37cf1112703fce89a9cc7682ddf/modules/dsp/gc_cic.vhd
+    revision: 349b74a39a6aa37cf1112703fce89a9cc7682ddf
+    accessed: '2026-09-26'
+    scope: modules/dsp/gc_cic.vhd
+    details: Inspected representative source header; this does not establish a uniform whole-repository
+      license.
+maintenance:
+  status: unknown
+  summary: Pinned snapshot inspected. Head date is recorded; a shallow snapshot does not establish maintenance
+    responsiveness or last meaningful code change.
+  observed_head_date: '2026-09-22'
+  last_meaningful_activity: null
+  evidence:
+  - type: source_inspection
+    url: https://gitlab.com/ohwr/project/general-cores/-/blob/349b74a39a6aa37cf1112703fce89a9cc7682ddf/README.md
+    revision: 349b74a39a6aa37cf1112703fce89a9cc7682ddf
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Pinned snapshot inspected. Head date is recorded; a shallow snapshot does not establish maintenance
+      responsiveness or last meaningful code change.
+  - type: source_inspection
+    url: https://gitlab.com/ohwr/project/general-cores/-/commit/349b74a39a6aa37cf1112703fce89a9cc7682ddf
+    revision: 349b74a39a6aa37cf1112703fce89a9cc7682ddf
+    accessed: '2026-09-26'
+    scope: repository HEAD metadata
+    details: Observed git commit date 2026-09-22; not classified as meaningful engineering activity.
+documentation:
+  status: present
+  summary: Repository documentation inspected; core-level API and coverage details vary.
+  evidence:
+  - type: source_inspection
+    url: https://gitlab.com/ohwr/project/general-cores/-/blob/349b74a39a6aa37cf1112703fce89a9cc7682ddf/README.md
+    revision: 349b74a39a6aa37cf1112703fce89a9cc7682ddf
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Repository introduction and integration documentation exist.
+limitations: []
+evidence:
+- type: source_inspection
+  url: https://gitlab.com/ohwr/project/general-cores/-/blob/349b74a39a6aa37cf1112703fce89a9cc7682ddf/README.md
+  revision: 349b74a39a6aa37cf1112703fce89a9cc7682ddf
+  accessed: '2026-09-26'
+  scope: README.md
+  details: Inspected project introduction and selected sources; see individual IP records.
+verification:
+  source:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  elaboration:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  upstream_testbench:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  self_checking_testbench:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  formal:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  upstream_ci:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  synthesis:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []

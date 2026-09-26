@@ -1,0 +1,158 @@
+schema_version: 1
+kind: ip
+id: taxi-axis-async-fifo
+name: taxi-axis-async-fifo
+project: taxi
+upstream_path: src/axis/rtl/taxi_axis_async_fifo.sv
+summary: AXI-Stream asynchronous FIFO from the maintained Taxi library.
+category: fifo
+tags:
+- AXI Stream
+- asynchronous FIFO
+- cdc
+language:
+- SystemVerilog
+license:
+  expression: CERN-OHL-S-2.0
+  scope: Selected source file; dependencies and generated outputs may differ.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://github.com/fpganinja/taxi/blob/cc70b270b910d369ab1ad7b3855e76399fd461f1/src/axis/rtl/taxi_axis_async_fifo.sv
+    revision: cc70b270b910d369ab1ad7b3855e76399fd461f1
+    accessed: '2026-09-26'
+    scope: src/axis/rtl/taxi_axis_async_fifo.sv
+    details: Inspected source API, imports/dependencies and implementation structure; not executed.
+interfaces:
+- FIFO read/write or stream
+- AXI Stream
+fpga_families: []
+toolchains:
+- name: Verilator
+  status: claimed
+  scope: Upstream documents simulation flow; not a synthesis claim.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/fpganinja/taxi/blob/cc70b270b910d369ab1ad7b3855e76399fd461f1/README.md
+    revision: cc70b270b910d369ab1ad7b3855e76399fd461f1
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Upstream documents simulation flow; not a synthesis claim.
+reuse_scope: general
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source-level API and integration reviewed; completeness for a specific application remains
+    unqualified.
+  evidence:
+  - *id001
+documentation:
+  status: present
+  summary: Source API and repository documentation available; inspect linked parameters and dependencies
+    before reuse.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/fpganinja/taxi/blob/cc70b270b910d369ab1ad7b3855e76399fd461f1/README.md
+    revision: cc70b270b910d369ab1ad7b3855e76399fd461f1
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Documentation/source API reviewed; no numerical quality score assigned.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_testbench:
+    status: present
+    summary: A matching upstream testbench exists; coverage is limited to its configurations.
+    evidence:
+    - &id002
+      type: source_inspection
+      url: https://github.com/fpganinja/taxi/blob/cc70b270b910d369ab1ad7b3855e76399fd461f1/src/axis/tb/taxi_axis_async_fifo/test_taxi_axis_async_fifo.py
+      revision: cc70b270b910d369ab1ad7b3855e76399fd461f1
+      accessed: '2026-09-26'
+      scope: src/axis/tb/taxi_axis_async_fifo/test_taxi_axis_async_fifo.py
+      details: Inspected testbench source; no simulation result collected.
+  self_checking_testbench:
+    status: present
+    summary: Assertions or result comparisons found in this testbench; not a pass result.
+    evidence:
+    - *id002
+  simulation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_ci:
+    status: present
+    summary: CI configuration exists; job success and per-block coverage not established.
+    evidence:
+    - type: source_inspection
+      url: https://github.com/fpganinja/taxi/blob/cc70b270b910d369ab1ad7b3855e76399fd461f1/.github/workflows/regression-tests.yml
+      revision: cc70b270b910d369ab1ad7b3855e76399fd461f1
+      accessed: '2026-09-26'
+      scope: project CI configuration, not a per-core result
+      details: Workflow/configuration inspected. Presence does not mean a successful CI run.
+  synthesis:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+verification_frameworks:
+- cocotb
+limitations:
+- kind: architecture
+  summary: Current library uses CERN-OHL-S-2.0 or commercial licensing; do not assume legacy MIT terms.
+  evidence:
+  - type: our_review
+    url: https://github.com/fpganinja/taxi/blob/cc70b270b910d369ab1ad7b3855e76399fd461f1/src/axis/rtl/taxi_axis_async_fifo.sv
+    revision: cc70b270b910d369ab1ad7b3855e76399fd461f1
+    accessed: '2026-09-26'
+    scope: src/axis/rtl/taxi_axis_async_fifo.sv
+    details: Engineering interpretation from the cited source; application fit requires review.
+our_usage: []
+rejected_for: []
+selection:
+  status: candidate
+  reason: Candidate for requirements-specific evaluation; no MODULIQ/AI-HIL adoption or validation is
+    claimed.
+  evidence:
+  - type: our_review
+    url: https://github.com/fpganinja/taxi/blob/cc70b270b910d369ab1ad7b3855e76399fd461f1/src/axis/rtl/taxi_axis_async_fifo.sv
+    revision: cc70b270b910d369ab1ad7b3855e76399fd461f1
+    accessed: '2026-09-26'
+    scope: src/axis/rtl/taxi_axis_async_fifo.sv
+    details: Candidate for requirements-specific evaluation; no MODULIQ/AI-HIL adoption or validation
+      is claimed.
+reviewed_at: '2026-09-26'

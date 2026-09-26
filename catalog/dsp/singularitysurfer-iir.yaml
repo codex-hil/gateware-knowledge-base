@@ -1,0 +1,162 @@
+schema_version: 1
+kind: ip
+id: singularitysurfer-iir
+name: singularitysurfer-iir
+project: singularitysurfer
+upstream_path: FPGA/HDL/filter/RIIR.v
+summary: Shift-based first-order IIR used in the lock-in signal chain.
+category: dsp
+tags:
+- IIR
+- filter
+- lockin
+language:
+- Verilog
+license:
+  expression: MIT
+  scope: Selected source file; dependencies and generated outputs may differ.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier/blob/9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0/LICENSE
+    revision: 9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+    accessed: '2026-09-26'
+    scope: LICENSE
+    details: Repository notice used where selected file lacks explicit terms; dependency licenses require
+      separate review.
+interfaces:
+- fixed-point samples
+fpga_families:
+- name: iCE40UP5K
+  status: claimed
+  scope: Target platform described upstream.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier/blob/9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0/README.md
+    revision: 9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Target platform described upstream.
+toolchains:
+- name: yosys-nextpnr
+  status: integration_present
+  scope: Build recipe exists for top-level design; not an isolated-core synthesis result.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier/blob/9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0/FPGA/HDL/SingularitySurfer/Makefile
+    revision: 9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+    accessed: '2026-09-26'
+    scope: FPGA/HDL/SingularitySurfer/Makefile
+    details: Build recipe exists for top-level design; not an isolated-core synthesis result.
+reuse_scope: general
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source-level API and integration reviewed; completeness for a specific application remains
+    unqualified.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier/blob/9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0/FPGA/HDL/filter/RIIR.v
+    revision: 9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+    accessed: '2026-09-26'
+    scope: FPGA/HDL/filter/RIIR.v
+    details: Inspected source API, imports/dependencies and implementation structure; not executed.
+documentation:
+  status: present
+  summary: Source API and repository documentation available; inspect linked parameters and dependencies
+    before reuse.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier/blob/9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0/README.md
+    revision: 9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Documentation/source API reviewed; no numerical quality score assigned.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_testbench:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  self_checking_testbench:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_ci:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  synthesis:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+verification_frameworks: []
+limitations:
+- kind: architecture
+  summary: Shift-based coefficient choices constrain time constants; verify truncation and fixed-point
+    behavior.
+  evidence:
+  - type: our_review
+    url: https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier/blob/9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0/FPGA/HDL/filter/RIIR.v
+    revision: 9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+    accessed: '2026-09-26'
+    scope: FPGA/HDL/filter/RIIR.v
+    details: Engineering interpretation from the cited source; application fit requires review.
+- kind: verification_gap
+  summary: tick_l is initialized but not updated in this file. Review whether tick must be a one-cycle
+    pulse; sustained tick behavior is not verified.
+  evidence:
+  - *id001
+our_usage: []
+rejected_for: []
+selection:
+  status: reference_only
+  reason: Integration/architecture reference; constraints require review before reuse.
+  evidence:
+  - type: our_review
+    url: https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier/blob/9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0/FPGA/HDL/filter/RIIR.v
+    revision: 9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+    accessed: '2026-09-26'
+    scope: FPGA/HDL/filter/RIIR.v
+    details: Integration/architecture reference; constraints require review before reuse.
+reviewed_at: '2026-09-26'
