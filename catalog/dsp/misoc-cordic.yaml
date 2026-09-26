@@ -1,0 +1,127 @@
+schema_version: 1
+kind: ip
+id: misoc-cordic
+name: misoc-cordic
+project: misoc
+upstream_path: misoc/cores/cordic.py
+summary: Configurable CORDIC arithmetic engine.
+category: dsp
+tags:
+- CORDIC
+- IQ
+- DSP
+language:
+- Python/Migen
+license:
+  expression: GPL-3.0-or-later
+  scope: Selected source file; dependencies and generated outputs may differ.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://git.m-labs.hk/M-Labs/misoc/src/commit/0e99d28d88c25ca86b39d2452417cb500fc52abd/misoc/cores/cordic.py
+    revision: 0e99d28d88c25ca86b39d2452417cb500fc52abd
+    accessed: '2026-09-26'
+    scope: misoc/cores/cordic.py
+    details: Inspected source API, imports/dependencies and implementation structure; not executed.
+interfaces:
+- fixed-point samples
+fpga_families: []
+toolchains: []
+reuse_scope: ecosystem
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source-level API and integration reviewed; completeness for a specific application remains
+    unqualified.
+  evidence:
+  - *id001
+documentation:
+  status: present
+  summary: Source API and repository documentation available; inspect linked parameters and dependencies
+    before reuse.
+  evidence:
+  - type: source_inspection
+    url: https://git.m-labs.hk/M-Labs/misoc/src/commit/0e99d28d88c25ca86b39d2452417cb500fc52abd/README
+    revision: 0e99d28d88c25ca86b39d2452417cb500fc52abd
+    accessed: '2026-09-26'
+    scope: README
+    details: Documentation/source API reviewed; no numerical quality score assigned.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_testbench:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  self_checking_testbench:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_ci:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  synthesis:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+verification_frameworks: []
+limitations:
+- kind: license
+  summary: This core has a GPL-3.0-or-later header despite MiSoC BSD repository default.
+  evidence:
+  - *id001
+our_usage: []
+rejected_for: []
+selection:
+  status: candidate
+  reason: Candidate for requirements-specific evaluation; no MODULIQ/AI-HIL adoption or validation is
+    claimed.
+  evidence:
+  - type: our_review
+    url: https://git.m-labs.hk/M-Labs/misoc/src/commit/0e99d28d88c25ca86b39d2452417cb500fc52abd/misoc/cores/cordic.py
+    revision: 0e99d28d88c25ca86b39d2452417cb500fc52abd
+    accessed: '2026-09-26'
+    scope: misoc/cores/cordic.py
+    details: Candidate for requirements-specific evaluation; no MODULIQ/AI-HIL adoption or validation
+      is claimed.
+reviewed_at: '2026-09-26'

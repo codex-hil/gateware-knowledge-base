@@ -1,0 +1,140 @@
+schema_version: 1
+kind: ip
+id: wzab-fifo-to-udp
+name: FIFO to UDP packetizer
+project: wzab-hdl-library
+upstream_path: fifo_to_udp/src/fifo_to_udp.vhd
+summary: Transmit FIFO words as Ethernet/IPv4/UDP packet bytes using a ready/valid output.
+category: ethernet
+tags:
+- wzab
+- Zabolotny
+- UDP
+- streaming
+- DAQ
+language:
+- VHDL
+license:
+  expression: BSD-3-Clause
+  scope: Selected component notice; dependency and generator/output licenses must be considered separately.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/wzab/wzab-hdl-library/blob/a739bb79bc83da7b0ef6fd25d9033a34b0f97ace/fifo_to_udp/src/fifo_to_udp.vhd
+    revision: a739bb79bc83da7b0ef6fd25d9033a34b0f97ace
+    accessed: '2026-09-26'
+    scope: fifo_to_udp/src/fifo_to_udp.vhd
+    details: Selected source or component-specific licensing notice inspected.
+interfaces:
+- FIFO
+- UDP
+- Ethernet byte stream
+fpga_families: []
+toolchains: []
+reuse_scope: general
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source implementation inspected; target-specific qualification remains necessary.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://github.com/wzab/wzab-hdl-library/blob/a739bb79bc83da7b0ef6fd25d9033a34b0f97ace/fifo_to_udp/src/fifo_to_udp.vhd
+    revision: a739bb79bc83da7b0ef6fd25d9033a34b0f97ace
+    accessed: '2026-09-26'
+    scope: fifo_to_udp/src/fifo_to_udp.vhd
+    details: Inspected entity/API, source comments, dependencies and implementation. No execution.
+documentation:
+  status: present
+  summary: Component documentation/API describes integration constraints.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/wzab/wzab-hdl-library/blob/a739bb79bc83da7b0ef6fd25d9033a34b0f97ace/fifo_to_udp/README.md
+    revision: a739bb79bc83da7b0ef6fd25d9033a34b0f97ace
+    accessed: '2026-09-26'
+    scope: fifo_to_udp/README.md
+    details: Component-level documentation inspected.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_testbench:
+    status: present
+    summary: Matching testbench source inspected; no run collected.
+    evidence:
+    - type: source_inspection
+      url: https://github.com/wzab/wzab-hdl-library/blob/a739bb79bc83da7b0ef6fd25d9033a34b0f97ace/fifo_to_udp/src/fifo_to_udp_tb.vhd
+      revision: a739bb79bc83da7b0ef6fd25d9033a34b0f97ace
+      accessed: '2026-09-26'
+      scope: fifo_to_udp/src/fifo_to_udp_tb.vhd
+      details: Testbench exists; presence is not a pass.
+  self_checking_testbench:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_ci:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  synthesis:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+verification_frameworks: []
+limitations:
+- kind: unsupported_mode
+  summary: Transmit-only; caller supplies both MAC/IP addresses, packet limit and available FIFO data.
+    No complete ARP/IP stack is established.
+  evidence:
+  - type: our_review
+    url: https://github.com/wzab/wzab-hdl-library/blob/a739bb79bc83da7b0ef6fd25d9033a34b0f97ace/fifo_to_udp/README.md
+    revision: a739bb79bc83da7b0ef6fd25d9033a34b0f97ace
+    accessed: '2026-09-26'
+    scope: fifo_to_udp/README.md
+    details: Transmit-only; caller supplies both MAC/IP addresses, packet limit and available FIFO data.
+      No complete ARP/IP stack is established.
+our_usage: []
+rejected_for: []
+selection:
+  status: candidate
+  reason: Candidate for requirements-specific evaluation; no local adoption or test result claimed.
+  evidence:
+  - *id001
+reviewed_at: '2026-09-26'

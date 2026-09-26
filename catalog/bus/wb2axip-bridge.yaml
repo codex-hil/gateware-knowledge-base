@@ -1,0 +1,131 @@
+schema_version: 1
+kind: ip
+id: wb2axip-bridge
+name: wb2axip-bridge
+project: wb2axip
+upstream_path: rtl/wbm2axisp.v
+summary: Wishbone-to-AXI bridge implementation.
+category: bus
+tags:
+- Wishbone
+- AXI
+language:
+- Verilog
+license:
+  expression: Apache-2.0
+  scope: Selected source file; dependencies and generated outputs may differ.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://github.com/ZipCPU/wb2axip/blob/2e8d3bc2d26ddc33d1881022a2a2b9d3f0c16b9b/rtl/wbm2axisp.v
+    revision: 2e8d3bc2d26ddc33d1881022a2a2b9d3f0c16b9b
+    accessed: '2026-09-26'
+    scope: rtl/wbm2axisp.v
+    details: Inspected source API, imports/dependencies and implementation structure; not executed.
+interfaces:
+- bus/stream
+- Wishbone
+fpga_families: []
+toolchains: []
+reuse_scope: general
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source-level API and integration reviewed; completeness for a specific application remains
+    unqualified.
+  evidence:
+  - *id001
+documentation:
+  status: present
+  summary: Source API and repository documentation available; inspect linked parameters and dependencies
+    before reuse.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/ZipCPU/wb2axip/blob/2e8d3bc2d26ddc33d1881022a2a2b9d3f0c16b9b/README.md
+    revision: 2e8d3bc2d26ddc33d1881022a2a2b9d3f0c16b9b
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Documentation/source API reviewed; no numerical quality score assigned.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_testbench:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  self_checking_testbench:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  formal:
+    status: present
+    summary: Formal harness and parameter configurations exist; successful proof not independently established.
+    evidence:
+    - type: source_inspection
+      url: https://github.com/ZipCPU/wb2axip/blob/2e8d3bc2d26ddc33d1881022a2a2b9d3f0c16b9b/bench/formal/wbm2axisp.sby
+      revision: 2e8d3bc2d26ddc33d1881022a2a2b9d3f0c16b9b
+      accessed: '2026-09-26'
+      scope: bench/formal/wbm2axisp.sby
+      details: SymbiYosys proof/cover configurations inspected, including width and endian variants; not
+        executed.
+  upstream_ci:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  synthesis:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+verification_frameworks:
+- SymbiYosys
+limitations: []
+our_usage: []
+rejected_for: []
+selection:
+  status: candidate
+  reason: Candidate for requirements-specific evaluation; no MODULIQ/AI-HIL adoption or validation is
+    claimed.
+  evidence:
+  - type: our_review
+    url: https://github.com/ZipCPU/wb2axip/blob/2e8d3bc2d26ddc33d1881022a2a2b9d3f0c16b9b/rtl/wbm2axisp.v
+    revision: 2e8d3bc2d26ddc33d1881022a2a2b9d3f0c16b9b
+    accessed: '2026-09-26'
+    scope: rtl/wbm2axisp.v
+    details: Candidate for requirements-specific evaluation; no MODULIQ/AI-HIL adoption or validation
+      is claimed.
+reviewed_at: '2026-09-26'

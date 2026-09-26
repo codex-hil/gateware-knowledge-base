@@ -1,0 +1,108 @@
+schema_version: 1
+kind: project
+id: agwb
+name: agwb
+repository: https://github.com/wzab/agwb
+aliases:
+- https://github.com/wzab/addr_gen_wb
+organization: Wojciech M. Zabołotny and contributors; see source-level credits
+revision: fc805536cb7d7ab95b5768778e990c997bd0f210
+inspected_at: '2026-09-26'
+inspection_scope: Selected source files, source notices, test harnesses and documentation inspected; no
+  HDL run or build.
+license:
+  expression: LicenseRef-AGWB-GPL-LGPL-notices
+  scope: README calls generator GPL v2; src/addr_gen_wb.py says LGPL V2. Generated-code permission and
+    external general-cores notices have separate scope.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://github.com/wzab/agwb/blob/fc805536cb7d7ab95b5768778e990c997bd0f210/README.md
+    revision: fc805536cb7d7ab95b5768778e990c997bd0f210
+    accessed: '2026-09-26'
+    scope: README.md
+    details: README calls generator GPL v2; src/addr_gen_wb.py says LGPL V2. Generated-code permission
+      and external general-cores notices have separate scope.
+maintenance:
+  status: unknown
+  summary: Pinned snapshot inspected; recent support responsiveness and last substantive code activity
+    not established.
+  observed_head_date: '2026-09-01'
+  last_meaningful_activity: null
+  evidence:
+  - type: source_inspection
+    url: https://github.com/wzab/agwb/commit/fc805536cb7d7ab95b5768778e990c997bd0f210
+    revision: fc805536cb7d7ab95b5768778e990c997bd0f210
+    accessed: '2026-09-26'
+    scope: HEAD metadata
+    details: Observed Git commit date; not treated as a proof of maintenance.
+documentation:
+  status: present
+  summary: README and selected implementation documentation inspected.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/wzab/agwb/blob/fc805536cb7d7ab95b5768778e990c997bd0f210/README.md
+    revision: fc805536cb7d7ab95b5768778e990c997bd0f210
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Project introduction inspected.
+limitations: []
+evidence:
+- *id001
+verification:
+  source:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  elaboration:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_testbench:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  self_checking_testbench:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_ci:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  synthesis:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []

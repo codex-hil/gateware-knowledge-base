@@ -1,0 +1,726 @@
+{
+  "date": "2026-09-26",
+  "note": "File hashes identify inspected upstream inputs. Source code is not included. Exact repository revisions are in projects/*.yaml.",
+  "sources": [
+    {
+      "ip": "litejesd204-link-b",
+      "project": "litejesd204b",
+      "source_path": "litejesd204/link.py",
+      "sha256": "9938695cebc8f25376f1b1ec00600f1ed318c0ee90463e175efe280f11d2f57b",
+      "catalogue_path": "catalog/adc-dac/litejesd204-link-b.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "litejesd204-link-c",
+      "project": "litejesd204b",
+      "source_path": "litejesd204/link_204c.py",
+      "sha256": "e034992e4dd8872a1dc28bcb9081676a62a6e86e95ab9a4b2f77e81c691865fb",
+      "catalogue_path": "catalog/adc-dac/litejesd204-link-c.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "singularitysurfer-adc",
+      "project": "singularitysurfer",
+      "source_path": "FPGA/HDL/adc_host.v",
+      "sha256": "f32e5d747bce6da75ff4215d22da291bac4922e426cf6949c2ed0da6bacd59eb",
+      "catalogue_path": "catalog/adc-dac/singularitysurfer-adc.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "artiq-eem",
+      "project": "artiq-current",
+      "source_path": "artiq/gateware/eem.py",
+      "sha256": "e761acd179bdd787208edb6323ae3595c5b9da0591fedf459cf2af3157badf99",
+      "catalogue_path": "catalog/bus/artiq-eem.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "colibri-avst-to-axis",
+      "project": "colibri",
+      "source_path": "src/interfaces/stream/avst_to_axis.vhdl",
+      "sha256": "dfb9c6924247e0daed1edb205f7f56488f42157bfb71790f0a818f45de83333e",
+      "catalogue_path": "catalog/bus/colibri-avst-to-axis.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "colibri-axis-to-avst",
+      "project": "colibri",
+      "source_path": "src/interfaces/stream/axis_to_avst.vhdl",
+      "sha256": "33a7f55dd3c71872f34a1a136328bd91150c3df02165e0c2c1678033cd330623",
+      "catalogue_path": "catalog/bus/colibri-axis-to-avst.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "colibri-header-add",
+      "project": "colibri",
+      "source_path": "src/packet/header_add.vhdl",
+      "sha256": "8556ceab41fd765d6f191ce8742dc8b2cfa09949dcefa799b4b71ab27d010600",
+      "catalogue_path": "catalog/bus/colibri-header-add.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "colibri-header-remove",
+      "project": "colibri",
+      "source_path": "src/packet/header_remove.vhdl",
+      "sha256": "51b7b7e50ea80c5c9b215d79c8aa5ffb9752f7d8de63047b03dd238cb8140649",
+      "catalogue_path": "catalog/bus/colibri-header-remove.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "colibri-stream-buffer",
+      "project": "colibri",
+      "source_path": "src/common/stream_buffer.vhdl",
+      "sha256": "cf7c3cea96b208ef805e50828e52c2e6be7479698668e670400788e89152486d",
+      "catalogue_path": "catalog/bus/colibri-stream-buffer.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "liteeth-etherbone",
+      "project": "liteeth",
+      "source_path": "liteeth/frontend/etherbone.py",
+      "sha256": "47c24c98caa15aa6b59eeaa8e790dad42591ab21f847b2802f85ec66c5f8f3c8",
+      "catalogue_path": "catalog/bus/liteeth-etherbone.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "liteiclink-serwb",
+      "project": "liteiclink",
+      "source_path": "liteiclink/serwb/core.py",
+      "sha256": "c8d410981cdb53bbfe9f1fe8da6e5fc833d6061dcf1b2d7cc75e160f9d6ea6b1",
+      "catalogue_path": "catalog/bus/liteiclink-serwb.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "litepcie-dma",
+      "project": "litepcie",
+      "source_path": "litepcie/frontend/dma.py",
+      "sha256": "2c269cca1f30207ff46caba03940607cf6b0814efb1210d7620ad9c793cad647",
+      "catalogue_path": "catalog/bus/litepcie-dma.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "litex-csr",
+      "project": "litex",
+      "source_path": "litex/soc/interconnect/csr_bus.py",
+      "sha256": "31468768d82e864c56f92d06886ad2c571e5eb6c3c13c94ff6125f1ae5e73e34",
+      "catalogue_path": "catalog/bus/litex-csr.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "litex-stream",
+      "project": "litex",
+      "source_path": "litex/soc/interconnect/stream.py",
+      "sha256": "a0e9e0057efcdc9c42bcc94b2c1a2c2cda7de3b9148ba0fbca9f896eff9ade7b",
+      "catalogue_path": "catalog/bus/litex-stream.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "litex-wishbone",
+      "project": "litex",
+      "source_path": "litex/soc/interconnect/wishbone.py",
+      "sha256": "7c1b41d0f909b5f03890d56d2fdc769a8b3255a8754b3b11dd82654da434efa1",
+      "catalogue_path": "catalog/bus/litex-wishbone.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "wb2axip-bridge",
+      "project": "wb2axip",
+      "source_path": "rtl/wbm2axisp.v",
+      "sha256": "d4c5bd135832937c4ea7c6b2417cf77165c5884b7c1b081cc2a877563513e344",
+      "catalogue_path": "catalog/bus/wb2axip-bridge.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "colibri-avst-cdc",
+      "project": "colibri",
+      "source_path": "src/interfaces/stream/avst_cdc.vhdl",
+      "sha256": "8af3c3d670d4031cd2014b14964200db0c81306f9e200a80ece06d8431631604",
+      "catalogue_path": "catalog/cdc/colibri-avst-cdc.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "colibri-synchro-handshake",
+      "project": "colibri",
+      "source_path": "src/common/synchro_handshake.vhdl",
+      "sha256": "4d66fde92d02fb034e250337657d4efc71bac753d367eaf6f7cd53ab4ace496a",
+      "catalogue_path": "catalog/cdc/colibri-synchro-handshake.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "colibri-synchro-reset",
+      "project": "colibri",
+      "source_path": "src/common/synchro_reset.vhdl",
+      "sha256": "0c6fc3cb21fb7053d16e22960a7bc805c34965da05eeaa1282df09bd6a793068",
+      "catalogue_path": "catalog/cdc/colibri-synchro-reset.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "colibri-synchro",
+      "project": "colibri",
+      "source_path": "src/common/synchro.vhdl",
+      "sha256": "4800d7d9196eefa5f03f04148344eef646990a70f3949f44899e3961f0745b8c",
+      "catalogue_path": "catalog/cdc/colibri-synchro.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "artiq-kasli",
+      "project": "artiq-current",
+      "source_path": "artiq/gateware/targets/kasli.py",
+      "sha256": "4abb4c8c27c8192fa8f919988486ea9bace401401e6726374e63e5766bc3b1b7",
+      "catalogue_path": "catalog/control/artiq-kasli.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "gibblelab-cavity-pid",
+      "project": "gibblelab",
+      "source_path": "MCFS_HD/Sources/hdl/CavPID.v",
+      "sha256": "c3405712209edf6a980b1cacd7ee433011469ad3d12f9bdcedbd84fc774eff75",
+      "catalogue_path": "catalog/control/gibblelab-cavity-pid.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "kasli-soc",
+      "project": "artiq-zynq",
+      "source_path": "src/gateware/kasli_soc.py",
+      "sha256": "fdeb5c31a6335e4702414507e6b44e806f239c176360c1324b0d7d143cbb2985",
+      "catalogue_path": "catalog/control/kasli-soc.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "linien-autolock",
+      "project": "linien",
+      "source_path": "gateware/logic/autolock.py",
+      "sha256": "f3960cefbb7eb96ed19f251fdb3a0b53ae2f398cf3ba3690b48579098faa5338",
+      "catalogue_path": "catalog/control/linien-autolock.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "linien-pid",
+      "project": "linien",
+      "source_path": "gateware/logic/pid.py",
+      "sha256": "578f0aa6de7312ae5fe0f054fd9f4e7ebf7d3166fed418ebb82fb56a6d2cfddf",
+      "catalogue_path": "catalog/control/linien-pid.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "phaser-iir",
+      "project": "phaser-gateware",
+      "source_path": "iir.py",
+      "sha256": "1270273505bc75f228a23fc0ef8c904d7142fdff73571d5e05a8ae9c2de06f3a",
+      "catalogue_path": "catalog/control/phaser-iir.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "pyrpl-pid",
+      "project": "pyrpl",
+      "source_path": "pyrpl/fpga/rtl/red_pitaya_pid_block.v",
+      "sha256": "b8e5479fcb0cd7737a04bcd58d5df9a7cb326a3920c8c3d9744080d4ebf28234",
+      "catalogue_path": "catalog/control/pyrpl-pid.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "redpitaya-trigger",
+      "project": "redpitaya",
+      "source_path": "rtl/rtl/classic/rp_adc_trig.v",
+      "sha256": "92031cd0a59fefeb67f10b670f2a5538b7e5f7cb14a93b90edfefcb42252a339",
+      "catalogue_path": "catalog/control/redpitaya-trigger.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "spec-base",
+      "project": "spec",
+      "source_path": "hdl/rtl/spec_base_wr.vhd",
+      "sha256": "a733c82b00a5e2f32404648860459564b4e8d28280bf8fbef104d328222b4663",
+      "catalogue_path": "catalog/control/spec-base.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "litescope-analyzer",
+      "project": "litescope",
+      "source_path": "litescope/core.py",
+      "sha256": "618f299c505667d2beed52448be755b3cab462efa51fc83fc7c455c16fa73f41",
+      "catalogue_path": "catalog/debug/litescope-analyzer.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "pyrpl-scope",
+      "project": "pyrpl",
+      "source_path": "pyrpl/fpga/rtl/red_pitaya_scope.v",
+      "sha256": "5460d3ab53bfc7e1e51252d9dc0bdb7e7eb509ba3eae35ec7194f1ee2ad04dee",
+      "catalogue_path": "catalog/debug/pyrpl-scope.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "gc-cic",
+      "project": "general-cores",
+      "source_path": "modules/dsp/gc_cic.vhd",
+      "sha256": "e9f1e1eb6dec8be9cbfd2146ca51e2f818b778ebf7d41b39d4d51d7465b81555",
+      "catalogue_path": "catalog/dsp/gc-cic.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "gc-fir",
+      "project": "general-cores",
+      "source_path": "modules/dsp/gc_pipelined_fir_filter.vhd",
+      "sha256": "fe42e284f94b9c0e962256c4ae0dbec282d123bc6852ae86576decdafc6033fb",
+      "catalogue_path": "catalog/dsp/gc-fir.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "gc-iq-demodulator",
+      "project": "general-cores",
+      "source_path": "modules/dsp/gc_iq_demodulator.vhd",
+      "sha256": "87745874c155e331c42809a073c7daff4ce4b3a52ec4f172d5d6e9d441608cd0",
+      "catalogue_path": "catalog/dsp/gc-iq-demodulator.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "linien-decimation",
+      "project": "linien",
+      "source_path": "gateware/logic/decimation.py",
+      "sha256": "cf0d4fcff15228db9d1897265331c4990ce331797c4895ebbeafd80727179de3",
+      "catalogue_path": "catalog/dsp/linien-decimation.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "linien-iir",
+      "project": "linien",
+      "source_path": "gateware/logic/iir.py",
+      "sha256": "186f28c18e8d243a92eb767e50b7f50a234ea4522c5e92971008aba054a39fca",
+      "catalogue_path": "catalog/dsp/linien-iir.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "misoc-cordic",
+      "project": "misoc",
+      "source_path": "misoc/cores/cordic.py",
+      "sha256": "a69f45f29afcc6e06a6de1db287a84824bcb8f750a0e4ec974f183007e00e527",
+      "catalogue_path": "catalog/dsp/misoc-cordic.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "phaser-interpolate",
+      "project": "phaser-gateware",
+      "source_path": "interpolate.py",
+      "sha256": "dd223d9dd250d9e16d2eb12f167cb98a4d19bf52f2453d788117717de6a53a6b",
+      "catalogue_path": "catalog/dsp/phaser-interpolate.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "pyrpl-iir",
+      "project": "pyrpl",
+      "source_path": "pyrpl/fpga/rtl/red_pitaya_iir_block.v",
+      "sha256": "1c03428debcda9d9dbc4362e2cc8735f4a42c9d8af0a7790c7365f3bfa3b7a25",
+      "catalogue_path": "catalog/dsp/pyrpl-iir.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "redpitaya-decimator",
+      "project": "redpitaya",
+      "source_path": "rtl/rtl/scope_dec_avg.sv",
+      "sha256": "6408a58cd39175c4d35c956e5ccd9c1854a1c0f9a660822883cea0fdab3c64af",
+      "catalogue_path": "catalog/dsp/redpitaya-decimator.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "redpitaya-stream-decimator",
+      "project": "redpitaya",
+      "source_path": "rtl/rtl/str_dec.sv",
+      "sha256": "07ad8417a09b5097dbc178c9f1ad2778329e325158b094f307152d97ddaaf8c6",
+      "catalogue_path": "catalog/dsp/redpitaya-stream-decimator.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "singularitysurfer-cic",
+      "project": "singularitysurfer",
+      "source_path": "FPGA/HDL/filter/CIC.v",
+      "sha256": "5ccfde685d1e7d48fcfc72d749bd4bb81958dc14ce657a26a951fe7dd276a5fc",
+      "catalogue_path": "catalog/dsp/singularitysurfer-cic.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "singularitysurfer-cordic",
+      "project": "singularitysurfer",
+      "source_path": "FPGA/HDL/cordic/fullcordic.v",
+      "sha256": "6ed6bd4ef37d408cea57512dc3c8867d3fb7d89a58906aa319df021498328b15",
+      "catalogue_path": "catalog/dsp/singularitysurfer-cordic.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "singularitysurfer-dds",
+      "project": "singularitysurfer",
+      "source_path": "FPGA/HDL/dds.v",
+      "sha256": "3c57112b1330ce8cf7a35dbf6dd905c81f611596b54d84e9322c2eade6576504",
+      "catalogue_path": "catalog/dsp/singularitysurfer-dds.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "singularitysurfer-iir",
+      "project": "singularitysurfer",
+      "source_path": "FPGA/HDL/filter/RIIR.v",
+      "sha256": "45bb6bfd289a675dea276752cbff03d873d58eb082d7ad7d2f4b4f9e1c872b7a",
+      "catalogue_path": "catalog/dsp/singularitysurfer-iir.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "singularitysurfer-nco",
+      "project": "singularitysurfer",
+      "source_path": "FPGA/HDL/oscillator.v",
+      "sha256": "7b5b19d6f558dd620541761b1c7ce52371551dc1f3feecfbf74d13c9bce3ce65",
+      "catalogue_path": "catalog/dsp/singularitysurfer-nco.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "zipcpu-cordic",
+      "project": "cordic",
+      "source_path": "rtl/cordic.v",
+      "sha256": "b6f31f02ccb26f9e1e1456897ed1c352cd4f238a6cd6abaed3dd12e741549d0d",
+      "catalogue_path": "catalog/dsp/zipcpu-cordic.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "legacy-rgmii-mac",
+      "project": "verilog-ethernet",
+      "source_path": "rtl/eth_mac_1g_rgmii.v",
+      "sha256": "1b2169d54706005ef54ed5cdb1c994e65bd5b329dca8fc917f6badd212f36b5b",
+      "catalogue_path": "catalog/ethernet/legacy-rgmii-mac.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "liteeth-ecp5-rgmii",
+      "project": "liteeth",
+      "source_path": "liteeth/phy/ecp5rgmii.py",
+      "sha256": "7d40bb22d60adc760f0f65aace5491a269f2e4f598e3d386f4a742dc9cb145a1",
+      "catalogue_path": "catalog/ethernet/liteeth-ecp5-rgmii.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "liteeth-mac",
+      "project": "liteeth",
+      "source_path": "liteeth/mac/core.py",
+      "sha256": "1752ca70279a6af2280d1866a9484319508be9cb47671d5289dbdc51d3204987",
+      "catalogue_path": "catalog/ethernet/liteeth-mac.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "liteeth-rmii",
+      "project": "liteeth",
+      "source_path": "liteeth/phy/rmii.py",
+      "sha256": "4a522b73fa9f73b6c4afd31eaa0e6e471fa6aa5d547268890e2ac38dd4c16b3b",
+      "catalogue_path": "catalog/ethernet/liteeth-rmii.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "taxi-rgmii-mac",
+      "project": "taxi",
+      "source_path": "src/eth/rtl/taxi_eth_mac_1g_rgmii.sv",
+      "sha256": "3cce403cd2bf7e26fed4ea5b9d0b3d70da85bfb65ae2c9abd6309e70c2faf4e6",
+      "catalogue_path": "catalog/ethernet/taxi-rgmii-mac.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "wr-endpoint",
+      "project": "wr-cores",
+      "source_path": "modules/wr_endpoint/wr_endpoint.vhd",
+      "sha256": "eb369ad28a3ba19bb9063845b587d48171684ea855249ee5fd270541f9b2a84e",
+      "catalogue_path": "catalog/ethernet/wr-endpoint.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "colibri-cc-ram-fifo",
+      "project": "colibri",
+      "source_path": "src/memory/cc_ram_fifo.vhdl",
+      "sha256": "0d176f1ec7934c18e43c6dd3658ffe3362c7162c1a0693ab14b529f75a61c48c",
+      "catalogue_path": "catalog/fifo/colibri-cc-ram-fifo.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "colibri-fifo",
+      "project": "colibri",
+      "source_path": "src/memory/fifo.vhdl",
+      "sha256": "a205688f37cbb82fed8573fea4d195c2d5cb4dccce19055c1ba466b3a32c6bb9",
+      "catalogue_path": "catalog/fifo/colibri-fifo.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "legacy-axis-fifo",
+      "project": "verilog-axis",
+      "source_path": "rtl/axis_async_fifo.v",
+      "sha256": "fe5ff09a96a5f6fd13606529e0265f3e44aca308dcd83121f963f1dc7d53fb40",
+      "catalogue_path": "catalog/fifo/legacy-axis-fifo.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "taxi-axis-async-fifo",
+      "project": "taxi",
+      "source_path": "src/axis/rtl/taxi_axis_async_fifo.sv",
+      "sha256": "d858c4204b3fae043b5d0408d8e3f09e9473a16ba862fba8ad1c2f2dadb9e9e4",
+      "catalogue_path": "catalog/fifo/taxi-axis-async-fifo.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "colibri-i2c-controller",
+      "project": "colibri",
+      "source_path": "src/io/i2c/i2c_controller.vhdl",
+      "sha256": "06e46d79f8067b8eae9e639e70a384dcd11014c468aa2ab6bffae7a6a4d27b9d",
+      "catalogue_path": "catalog/i2c/colibri-i2c-controller.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "litex-i2c",
+      "project": "litex",
+      "source_path": "litex/soc/cores/i2c.py",
+      "sha256": "97a466f1258a3f41fc17df2ee84ec22c4dec87d4d9647a104fea7bcafd4b27f5",
+      "catalogue_path": "catalog/i2c/litex-i2c.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "linien-demodulation",
+      "project": "linien",
+      "source_path": "gateware/logic/chains.py",
+      "sha256": "515284d3abd1ddce78c394f3b47fddf7fbf746ea80790db1e5b60e3ddee02239",
+      "catalogue_path": "catalog/lockin/linien-demodulation.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "pyrpl-iq",
+      "project": "pyrpl",
+      "source_path": "pyrpl/fpga/rtl/red_pitaya_iq_block.v",
+      "sha256": "7ef1cae4721e98d51881d1cc12488d41d7600fbb8db7a09ed5f395e282e75417",
+      "catalogue_path": "catalog/lockin/pyrpl-iq.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "singularitysurfer-chain",
+      "project": "singularitysurfer",
+      "source_path": "FPGA/HDL/SingularitySurfer/TOP_V1.v",
+      "sha256": "ce10291afff5bcc82a93ac6e922c43adeb000aa94069c5fc3e7a95474916c913",
+      "catalogue_path": "catalog/lockin/singularitysurfer-chain.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "colibri-simple-dpram",
+      "project": "colibri",
+      "source_path": "src/memory/simple_dpram.vhdl",
+      "sha256": "8cb2badb31cb10c1f4adf51f2151becf5fa9b1ea16ab82365b081ab8a85dd7c4",
+      "catalogue_path": "catalog/memory/colibri-simple-dpram.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "colibri-wb-ram",
+      "project": "colibri",
+      "source_path": "src/interfaces/memory_mapped/wb_ram.vhdl",
+      "sha256": "8c37ebfbf85c53ae9e6a2762255109fc827ccb1027014740bdb061f8bd824adf",
+      "catalogue_path": "catalog/memory/colibri-wb-ram.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "litedram-controller",
+      "project": "litedram",
+      "source_path": "litedram/core/controller.py",
+      "sha256": "f1eae359651e2cdafddc36355bcd2d0f3f38038b6dac228347b7b9917d1335e6",
+      "catalogue_path": "catalog/memory/litedram-controller.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "colibri-crc",
+      "project": "colibri",
+      "source_path": "src/comms/crc.vhdl",
+      "sha256": "8e29668238e4a19fa4c5b62c9c85796b4945aa9692d47fbb2850735978178165",
+      "catalogue_path": "catalog/misc/colibri-crc.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "artiq-ttl-serdes",
+      "project": "artiq-current",
+      "source_path": "artiq/gateware/rtio/phy/ttl_serdes_7series.py",
+      "sha256": "36f3d02f91cc33a75674605b79d88c30a95b7d61d9643ccee8366b5a364ab0f0",
+      "catalogue_path": "catalog/serdes/artiq-ttl-serdes.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "colibri-decode-8b10b",
+      "project": "colibri",
+      "source_path": "src/endec/decode_8b10b.vhdl",
+      "sha256": "9059797a6d1dc46bc17da9d84cfbdf7c5e80fe779e1cdb658b800d6995ed0ec6",
+      "catalogue_path": "catalog/serdes/colibri-decode-8b10b.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "colibri-encode-8b10b",
+      "project": "colibri",
+      "source_path": "src/endec/encode_8b10b.vhdl",
+      "sha256": "dc03e117349cd9cc9f1b7437c9f2a48827927d84a694f1aad9414b9fcdc2a537",
+      "catalogue_path": "catalog/serdes/colibri-encode-8b10b.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "colibri-gearbox",
+      "project": "colibri",
+      "source_path": "src/comms/gearbox.vhdl",
+      "sha256": "59f1d571ef1323d5d76f43852c4ca130ba870bdf71eb78d516f5b20e52debe22",
+      "catalogue_path": "catalog/serdes/colibri-gearbox.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "liteiclink-gtp",
+      "project": "liteiclink",
+      "source_path": "liteiclink/serdes/gtp_7series.py",
+      "sha256": "c1e22feb4caae4ee8aed050adefd885daf666a75b47553d0eb70981c47214921",
+      "catalogue_path": "catalog/serdes/liteiclink-gtp.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "litex-8b10b",
+      "project": "litex",
+      "source_path": "litex/soc/cores/code_8b10b.py",
+      "sha256": "28d80a04fa243b7e218b52c30268a8cb2229ea28d0f8d939fbf25589bc8a5810",
+      "catalogue_path": "catalog/serdes/litex-8b10b.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "artiq-spi",
+      "project": "artiq-current",
+      "source_path": "artiq/gateware/rtio/phy/spi2.py",
+      "sha256": "c9ff3dd5f5e076d8ce2995819d27328e21120ba8b850653b5d425f2a79a2031a",
+      "catalogue_path": "catalog/spi/artiq-spi.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "colibri-spi-master",
+      "project": "colibri",
+      "source_path": "src/io/spi/spi_master.vhdl",
+      "sha256": "8ab40f02e71ef73cbc8eea4849cd6e795353fce86ea93b58c5f69720cd1bedd4",
+      "catalogue_path": "catalog/spi/colibri-spi-master.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "colibri-spi-slave",
+      "project": "colibri",
+      "source_path": "src/io/spi/spi_slave.vhdl",
+      "sha256": "5c09e007137253096d09ffba43fc3d69698df521b2c62dde8bbeff477b37b7a5",
+      "catalogue_path": "catalog/spi/colibri-spi-slave.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "litex-spi-master",
+      "project": "litex",
+      "source_path": "litex/soc/cores/spi/spi_master.py",
+      "sha256": "dc3069a898d46c54144bd20c6a37484ad84d158cd4a7dcd24447e6dc756bb86c",
+      "catalogue_path": "catalog/spi/litex-spi-master.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "litex-spi-slave",
+      "project": "litex",
+      "source_path": "litex/soc/cores/spi/spi_slave.py",
+      "sha256": "06abb509f9476f45a26d639f59921140ef28a4603ae09bfe7d544f01fb3bb7b2",
+      "catalogue_path": "catalog/spi/litex-spi-slave.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "misoc-spi2",
+      "project": "misoc",
+      "source_path": "misoc/cores/spi2.py",
+      "sha256": "9138da3f4ab2ab2d5f78aa8404fdf95a1ccd7921a1331eab12d048ae29943e66",
+      "catalogue_path": "catalog/spi/misoc-spi2.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "artiq-drtio",
+      "project": "artiq-current",
+      "source_path": "artiq/gateware/drtio/core.py",
+      "sha256": "12ed3fee864879c4dba4e1302f8f8ebf0d116376bc87e3ff099780104f0deb1d",
+      "catalogue_path": "catalog/timing/artiq-drtio.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "artiq-rtio",
+      "project": "artiq-current",
+      "source_path": "artiq/gateware/rtio/core.py",
+      "sha256": "f7be8ae512106500a3369e456df57263d0d06e4cfe15775d308585e4b97729c5",
+      "catalogue_path": "catalog/timing/artiq-rtio.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "artiq-ttl",
+      "project": "artiq-current",
+      "source_path": "artiq/gateware/rtio/phy/ttl_simple.py",
+      "sha256": "60822a87ebe1754f725f3d07a8b54f89f389f68e500bdfd574ac48c084bdea16",
+      "catalogue_path": "catalog/timing/artiq-ttl.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "colibri-frequency-counter",
+      "project": "colibri",
+      "source_path": "src/misc/frequency_counter.vhdl",
+      "sha256": "22bb9a83d0aadeb85c02d8e44dd8d3bcd72b019c783e4c9d087e69658915d98e",
+      "catalogue_path": "catalog/timing/colibri-frequency-counter.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "liteeth-ptp",
+      "project": "liteeth",
+      "source_path": "liteeth/core/ptp.py",
+      "sha256": "84170a9c2ca86c0b2b3ea17df16e04b0ba573a3e5ace959fdfba05874b2d7d6c",
+      "catalogue_path": "catalog/timing/liteeth-ptp.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "litex-freqmeter",
+      "project": "litex",
+      "source_path": "litex/soc/cores/freqmeter.py",
+      "sha256": "9b138023c00e3679b8e28fee5f6135eabed8c9b243b31c3e6a33a759e390b72a",
+      "catalogue_path": "catalog/timing/litex-freqmeter.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "spec7-wr",
+      "project": "spec7",
+      "source_path": "hdl/board/wrc_board_spec7.vhd",
+      "sha256": "97f98f1d5bc6c9b7a2491749b25cb42e21e1d50140e5a686efe8a36fb69e9357",
+      "catalogue_path": "catalog/timing/spec7-wr.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "taxi-ptp-clock",
+      "project": "taxi",
+      "source_path": "src/ptp/rtl/taxi_ptp_clock.sv",
+      "sha256": "eb2b4b800aace085b71e346448ca4350e15bfa0c2ccd696f02d6402084cf9b93",
+      "catalogue_path": "catalog/timing/taxi-ptp-clock.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "wren-pulser",
+      "project": "wren",
+      "source_path": "hdl/rtl/pulser.vhd",
+      "sha256": "d9726729ee70fa2bfbe1eec1d2657b1f96818c743558e73f24122de726a0402b",
+      "catalogue_path": "catalog/timing/wren-pulser.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "wrpc",
+      "project": "wr-cores",
+      "source_path": "modules/wrc_core/wr_core.vhd",
+      "sha256": "19f9c6eccf082157e79dacfcf0d9988f8ab75bc48697e1c918c6de7bd4d9f6a5",
+      "catalogue_path": "catalog/timing/wrpc.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "colibri-uart",
+      "project": "colibri",
+      "source_path": "src/io/uart/uart.vhdl",
+      "sha256": "f31d66f4cff78f0ef16334cbe98f89352a35a6b7b972fc1e8048d51b783309bf",
+      "catalogue_path": "catalog/uart/colibri-uart.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    },
+    {
+      "ip": "litex-uart",
+      "project": "litex",
+      "source_path": "litex/soc/cores/uart.py",
+      "sha256": "e4734962e9fd0137a8b4f763d646589e16a6bdd9a4c7a4b45054f29456c28e64",
+      "catalogue_path": "catalog/uart/litex-uart.yaml",
+      "inspection": "API/dependency/license/source structure review; no execution"
+    }
+  ]
+}

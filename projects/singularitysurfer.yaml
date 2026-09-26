@@ -1,0 +1,117 @@
+schema_version: 1
+kind: project
+id: singularitysurfer
+name: singularitysurfer
+repository: https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier
+aliases: []
+organization: Norman Krackow; third-party CORDIC and other attributed cores
+revision: 9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+inspected_at: '2026-09-26'
+inspection_scope: README/license review and selected individual source APIs, dependencies and verification
+  artifacts. No full code audit or HDL execution.
+license:
+  expression: MIT
+  scope: Repository default or mixed-license summary; each IP record narrows the scope.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier/blob/9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0/LICENSE
+    revision: 9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+    accessed: '2026-09-26'
+    scope: LICENSE
+    details: Repository-level notice; individual source files and transitive dependencies must be checked
+      separately.
+maintenance:
+  status: unknown
+  summary: Pinned snapshot inspected. Head date is recorded; a shallow snapshot does not establish maintenance
+    responsiveness or last meaningful code change.
+  observed_head_date: '2023-05-11'
+  last_meaningful_activity: null
+  evidence:
+  - type: source_inspection
+    url: https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier/blob/9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0/README.md
+    revision: 9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Pinned snapshot inspected. Head date is recorded; a shallow snapshot does not establish maintenance
+      responsiveness or last meaningful code change.
+  - type: source_inspection
+    url: https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier/commit/9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+    revision: 9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+    accessed: '2026-09-26'
+    scope: repository HEAD metadata
+    details: Observed git commit date 2023-05-11; not classified as meaningful engineering activity.
+documentation:
+  status: present
+  summary: Repository documentation inspected; core-level API and coverage details vary.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier/blob/9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0/README.md
+    revision: 9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Repository introduction and integration documentation exist.
+limitations: []
+evidence:
+- type: source_inspection
+  url: https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier/blob/9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0/README.md
+  revision: 9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+  accessed: '2026-09-26'
+  scope: README.md
+  details: Inspected project introduction and selected sources; see individual IP records.
+verification:
+  source:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  elaboration:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  upstream_testbench:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  self_checking_testbench:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  formal:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  upstream_ci:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  synthesis:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: No system-level result established in this review.
+    evidence: []

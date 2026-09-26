@@ -1,0 +1,172 @@
+schema_version: 1
+kind: ip
+id: opencores-cordic
+name: OpenCores first-quadrant CORDIC
+project: opencores-verilog-cordic-core
+upstream_path: cordic.v
+summary: Configurable rotation/vectoring CORDIC with iterative, pipelined and combinational build options.
+category: dsp
+tags:
+- opencores
+- CORDIC
+- IQ
+- trigonometry
+language:
+- Verilog
+license:
+  expression: LicenseRef-CORDIC-unresolved
+  scope: Selected component notice; dependency and generator/output licenses must be considered separately.
+  evidence:
+  - type: source_inspection
+    url: https://opencores.org/ocsvn/verilog_cordic_core/!svn/bc/6/verilog_cordic_core/trunk/cordic.v
+    revision: svn:6
+    accessed: '2026-09-26'
+    scope: cordic.v
+    details: Selected source or component-specific licensing notice inspected.
+interfaces:
+- signed X/Y/angle
+fpga_families: []
+toolchains: []
+reuse_scope: general
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source implementation inspected; target-specific qualification remains necessary.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://opencores.org/ocsvn/verilog_cordic_core/!svn/bc/6/verilog_cordic_core/trunk/cordic.v
+    revision: svn:6
+    accessed: '2026-09-26'
+    scope: cordic.v
+    details: Inspected entity/API, source comments, dependencies and implementation. No execution.
+documentation:
+  status: present
+  summary: Component documentation/API describes integration constraints.
+  evidence:
+  - type: source_inspection
+    url: https://opencores.org/ocsvn/verilog_cordic_core/!svn/bc/6/verilog_cordic_core/trunk/cordic.v
+    revision: svn:6
+    accessed: '2026-09-26'
+    scope: cordic.v
+    details: Component-level documentation inspected.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_testbench:
+    status: present
+    summary: Matching testbench source inspected; no run collected.
+    evidence:
+    - type: source_inspection
+      url: https://opencores.org/ocsvn/verilog_cordic_core/!svn/bc/6/verilog_cordic_core/trunk/tb_cordic.v
+      revision: svn:6
+      accessed: '2026-09-26'
+      scope: tb_cordic.v
+      details: Testbench exists; presence is not a pass.
+  self_checking_testbench:
+    status: partial
+    summary: Testbench compares numerical error but only prints failures; no executed result collected.
+    evidence:
+    - type: source_inspection
+      url: https://opencores.org/ocsvn/verilog_cordic_core/!svn/bc/6/verilog_cordic_core/trunk/tb_cordic.v
+      revision: svn:6
+      accessed: '2026-09-26'
+      scope: tb_cordic.v
+      details: Tolerance comparisons and diagnostic behavior inspected.
+  simulation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_ci:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  synthesis:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+verification_frameworks: []
+limitations:
+- kind: unsupported_mode
+  summary: Core handles first quadrant; full-circle operation requires a coarse rotation wrapper.
+  evidence:
+  - type: our_review
+    url: https://opencores.org/ocsvn/verilog_cordic_core/!svn/bc/6/verilog_cordic_core/trunk/cordic.v
+    revision: svn:6
+    accessed: '2026-09-26'
+    scope: cordic.v
+    details: Core handles first quadrant; full-circle operation requires a coarse rotation wrapper.
+- kind: architecture
+  summary: Default 17-bit values and 16 iterations; increasing precision/iterations requires regenerating
+    the arctangent tables.
+  evidence:
+  - type: our_review
+    url: https://opencores.org/ocsvn/verilog_cordic_core/!svn/bc/6/verilog_cordic_core/trunk/cordic.v
+    revision: svn:6
+    accessed: '2026-09-26'
+    scope: cordic.v
+    details: Default 17-bit values and 16 iterations; increasing precision/iterations requires regenerating
+      the arctangent tables.
+- kind: license
+  summary: No explicit license in the two inspected files; establish permission before reuse.
+  evidence:
+  - type: our_review
+    url: https://opencores.org/ocsvn/verilog_cordic_core/!svn/bc/6/verilog_cordic_core/trunk/cordic.v
+    revision: svn:6
+    accessed: '2026-09-26'
+    scope: cordic.v
+    details: No explicit license in the two inspected files; establish permission before reuse.
+- kind: verification_gap
+  summary: Testbench reports tolerance failures with display output; it does not establish reliable failing
+    process status for CI.
+  evidence:
+  - type: our_review
+    url: https://opencores.org/ocsvn/verilog_cordic_core/!svn/bc/6/verilog_cordic_core/trunk/tb_cordic.v
+    revision: svn:6
+    accessed: '2026-09-26'
+    scope: tb_cordic.v
+    details: Testbench reports tolerance failures with display output; it does not establish reliable
+      failing process status for CI.
+our_usage: []
+rejected_for: []
+selection:
+  status: reference_only
+  reason: Architecture/integration reference; resolve the recorded limitations before reuse.
+  evidence:
+  - *id001
+reviewed_at: '2026-09-26'

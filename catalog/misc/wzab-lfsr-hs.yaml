@@ -1,0 +1,140 @@
+schema_version: 1
+kind: ip
+id: wzab-lfsr-hs
+name: WZab LFSR building block
+project: wzab-hdl-library
+upstream_path: genlfsr_hs/src/genlfsr.vhd
+summary: Parameterized LFSR component used by the two-direction pseudorandom-generator design.
+category: misc
+tags:
+- wzab
+- Zabolotny
+- LFSR
+- PRBS
+- test pattern
+language:
+- VHDL
+license:
+  expression: LicenseRef-Public-Domain
+  scope: Selected component notice; dependency and generator/output licenses must be considered separately.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/wzab/wzab-hdl-library/blob/a739bb79bc83da7b0ef6fd25d9033a34b0f97ace/genlfsr_hs/README
+    revision: a739bb79bc83da7b0ef6fd25d9033a34b0f97ace
+    accessed: '2026-09-26'
+    scope: genlfsr_hs/README
+    details: Selected source or component-specific licensing notice inspected.
+interfaces:
+- clock
+- enable
+- parallel data
+fpga_families: []
+toolchains: []
+reuse_scope: general
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source implementation inspected; target-specific qualification remains necessary.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://github.com/wzab/wzab-hdl-library/blob/a739bb79bc83da7b0ef6fd25d9033a34b0f97ace/genlfsr_hs/src/genlfsr.vhd
+    revision: a739bb79bc83da7b0ef6fd25d9033a34b0f97ace
+    accessed: '2026-09-26'
+    scope: genlfsr_hs/src/genlfsr.vhd
+    details: Inspected entity/API, source comments, dependencies and implementation. No execution.
+documentation:
+  status: present
+  summary: Component documentation/API describes integration constraints.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/wzab/wzab-hdl-library/blob/a739bb79bc83da7b0ef6fd25d9033a34b0f97ace/genlfsr_hs/README
+    revision: a739bb79bc83da7b0ef6fd25d9033a34b0f97ace
+    accessed: '2026-09-26'
+    scope: genlfsr_hs/README
+    details: Component-level documentation inspected.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_testbench:
+    status: present
+    summary: Matching testbench source inspected; no run collected.
+    evidence:
+    - type: source_inspection
+      url: https://github.com/wzab/wzab-hdl-library/blob/a739bb79bc83da7b0ef6fd25d9033a34b0f97ace/genlfsr_hs/sim2/genlfsr_tb.vhd
+      revision: a739bb79bc83da7b0ef6fd25d9033a34b0f97ace
+      accessed: '2026-09-26'
+      scope: genlfsr_hs/sim2/genlfsr_tb.vhd
+      details: Testbench exists; presence is not a pass.
+  self_checking_testbench:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_ci:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  synthesis:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+verification_frameworks: []
+limitations:
+- kind: verification_gap
+  summary: README statistical results describe the combined generator and include weak assessments; they
+    do not establish this leaf alone, cryptographic suitability or hardware validation.
+  evidence:
+  - type: our_review
+    url: https://github.com/wzab/wzab-hdl-library/blob/a739bb79bc83da7b0ef6fd25d9033a34b0f97ace/genlfsr_hs/README
+    revision: a739bb79bc83da7b0ef6fd25d9033a34b0f97ace
+    accessed: '2026-09-26'
+    scope: genlfsr_hs/README
+    details: README statistical results describe the combined generator and include weak assessments;
+      they do not establish this leaf alone, cryptographic suitability or hardware validation.
+our_usage: []
+rejected_for: []
+selection:
+  status: candidate
+  reason: Candidate for requirements-specific evaluation; no local adoption or test result claimed.
+  evidence:
+  - *id001
+reviewed_at: '2026-09-26'

@@ -1,0 +1,147 @@
+schema_version: 1
+kind: ip
+id: legacy-axis-fifo
+name: legacy-axis-fifo
+project: verilog-axis
+upstream_path: rtl/axis_async_fifo.v
+summary: Legacy MIT-licensed AXI-Stream asynchronous FIFO.
+category: fifo
+tags:
+- AXI Stream
+- asynchronous FIFO
+- cdc
+language:
+- Verilog
+license:
+  expression: MIT
+  scope: Selected source file; dependencies and generated outputs may differ.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://github.com/alexforencich/verilog-axis/blob/48ff7a7e2ef782cf778d47910cf85835c64b1bce/rtl/axis_async_fifo.v
+    revision: 48ff7a7e2ef782cf778d47910cf85835c64b1bce
+    accessed: '2026-09-26'
+    scope: rtl/axis_async_fifo.v
+    details: Inspected source API, imports/dependencies and implementation structure; not executed.
+interfaces:
+- FIFO read/write or stream
+- AXI Stream
+fpga_families: []
+toolchains: []
+reuse_scope: general
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source-level API and integration reviewed; completeness for a specific application remains
+    unqualified.
+  evidence:
+  - *id001
+documentation:
+  status: present
+  summary: Source API and repository documentation available; inspect linked parameters and dependencies
+    before reuse.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/alexforencich/verilog-axis/blob/48ff7a7e2ef782cf778d47910cf85835c64b1bce/README
+    revision: 48ff7a7e2ef782cf778d47910cf85835c64b1bce
+    accessed: '2026-09-26'
+    scope: README
+    details: Documentation/source API reviewed; no numerical quality score assigned.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_testbench:
+    status: present
+    summary: A matching upstream testbench exists; coverage is limited to its configurations.
+    evidence:
+    - &id002
+      type: source_inspection
+      url: https://github.com/alexforencich/verilog-axis/blob/48ff7a7e2ef782cf778d47910cf85835c64b1bce/tb/axis_async_fifo/test_axis_async_fifo.py
+      revision: 48ff7a7e2ef782cf778d47910cf85835c64b1bce
+      accessed: '2026-09-26'
+      scope: tb/axis_async_fifo/test_axis_async_fifo.py
+      details: Inspected testbench source; no simulation result collected.
+  self_checking_testbench:
+    status: present
+    summary: Assertions or result comparisons found in this testbench; not a pass result.
+    evidence:
+    - *id002
+  simulation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_ci:
+    status: present
+    summary: CI configuration exists; job success and per-block coverage not established.
+    evidence:
+    - type: source_inspection
+      url: https://github.com/alexforencich/verilog-axis/blob/48ff7a7e2ef782cf778d47910cf85835c64b1bce/.github/workflows/regression-tests.yml
+      revision: 48ff7a7e2ef782cf778d47910cf85835c64b1bce
+      accessed: '2026-09-26'
+      scope: project CI configuration, not a per-core result
+      details: Workflow/configuration inspected. Presence does not mean a successful CI run.
+  synthesis:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+verification_frameworks:
+- cocotb
+limitations:
+- kind: architecture
+  summary: Upstream deprecated this repository in favor of Taxi; no future maintenance promised. Power-of-two
+    FIFO depths only.
+  evidence:
+  - type: our_review
+    url: https://github.com/alexforencich/verilog-axis/blob/48ff7a7e2ef782cf778d47910cf85835c64b1bce/rtl/axis_async_fifo.v
+    revision: 48ff7a7e2ef782cf778d47910cf85835c64b1bce
+    accessed: '2026-09-26'
+    scope: rtl/axis_async_fifo.v
+    details: Engineering interpretation from the cited source; application fit requires review.
+our_usage: []
+rejected_for: []
+selection:
+  status: reference_only
+  reason: Integration/architecture reference; constraints require review before reuse.
+  evidence:
+  - type: our_review
+    url: https://github.com/alexforencich/verilog-axis/blob/48ff7a7e2ef782cf778d47910cf85835c64b1bce/rtl/axis_async_fifo.v
+    revision: 48ff7a7e2ef782cf778d47910cf85835c64b1bce
+    accessed: '2026-09-26'
+    scope: rtl/axis_async_fifo.v
+    details: Integration/architecture reference; constraints require review before reuse.
+reviewed_at: '2026-09-26'

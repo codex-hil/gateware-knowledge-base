@@ -1,0 +1,153 @@
+schema_version: 1
+kind: ip
+id: linien-autolock
+name: linien-autolock
+project: linien
+upstream_path: gateware/logic/autolock.py
+summary: FPGA-side lock acquisition logic coordinated with Linien software.
+category: control
+tags:
+- lock acquisition
+- autolock
+- frequency lock
+- laser lock
+language:
+- Python/Migen
+license:
+  expression: GPL-3.0-or-later
+  scope: Selected source file; dependencies and generated outputs may differ.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://github.com/linien-org/linien/blob/6caa6a9f13189528025317969292f70b7ffbd484/gateware/logic/autolock.py
+    revision: 6caa6a9f13189528025317969292f70b7ffbd484
+    accessed: '2026-09-26'
+    scope: gateware/logic/autolock.py
+    details: Inspected source API, imports/dependencies and implementation structure; not executed.
+interfaces:
+- sample/control
+fpga_families:
+- name: Zynq-7000
+  status: claimed
+  scope: Red Pitaya platform association; no independent family-wide portability claim.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/linien-org/linien/blob/6caa6a9f13189528025317969292f70b7ffbd484/README.md
+    revision: 6caa6a9f13189528025317969292f70b7ffbd484
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Red Pitaya platform association; no independent family-wide portability claim.
+toolchains: []
+reuse_scope: ecosystem
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source-level API and integration reviewed; completeness for a specific application remains
+    unqualified.
+  evidence:
+  - *id001
+documentation:
+  status: present
+  summary: Source API and repository documentation available; inspect linked parameters and dependencies
+    before reuse.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/linien-org/linien/blob/6caa6a9f13189528025317969292f70b7ffbd484/README.md
+    revision: 6caa6a9f13189528025317969292f70b7ffbd484
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Documentation/source API reviewed; no numerical quality score assigned.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_testbench:
+    status: present
+    summary: A matching upstream testbench exists; coverage is limited to its configurations.
+    evidence:
+    - &id002
+      type: source_inspection
+      url: https://github.com/linien-org/linien/blob/6caa6a9f13189528025317969292f70b7ffbd484/tests/test_simple_autolock_fpga.py
+      revision: 6caa6a9f13189528025317969292f70b7ffbd484
+      accessed: '2026-09-26'
+      scope: tests/test_simple_autolock_fpga.py
+      details: Inspected testbench source; no simulation result collected.
+  self_checking_testbench:
+    status: present
+    summary: Assertions or result comparisons found in this testbench; not a pass result.
+    evidence:
+    - *id002
+  simulation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_ci:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  synthesis:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+verification_frameworks:
+- Migen simulation
+limitations:
+- kind: architecture
+  summary: Gateware depends on Migen/MiSoC and Linien fixed-point/control conventions; system lock algorithms
+    also involve software.
+  evidence:
+  - type: our_review
+    url: https://github.com/linien-org/linien/blob/6caa6a9f13189528025317969292f70b7ffbd484/gateware/logic/autolock.py
+    revision: 6caa6a9f13189528025317969292f70b7ffbd484
+    accessed: '2026-09-26'
+    scope: gateware/logic/autolock.py
+    details: Engineering interpretation from the cited source; application fit requires review.
+our_usage: []
+rejected_for: []
+selection:
+  status: candidate
+  reason: Candidate for requirements-specific evaluation; no MODULIQ/AI-HIL adoption or validation is
+    claimed.
+  evidence:
+  - type: our_review
+    url: https://github.com/linien-org/linien/blob/6caa6a9f13189528025317969292f70b7ffbd484/gateware/logic/autolock.py
+    revision: 6caa6a9f13189528025317969292f70b7ffbd484
+    accessed: '2026-09-26'
+    scope: gateware/logic/autolock.py
+    details: Candidate for requirements-specific evaluation; no MODULIQ/AI-HIL adoption or validation
+      is claimed.
+reviewed_at: '2026-09-26'

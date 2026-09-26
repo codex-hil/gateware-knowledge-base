@@ -1,0 +1,145 @@
+schema_version: 1
+kind: ip
+id: e2bus-controller
+name: E2Bus controller
+project: e2bus
+upstream_path: fpga/src/e2bus.vhd
+summary: Raw Ethernet control transport for FPGA local-bus access, with 100 Mb/s and 1 Gb/s integration
+  variants.
+category: ethernet
+tags:
+- wzab
+- Zabolotny
+- Ethernet
+- Wishbone
+- remote control
+language:
+- VHDL
+license:
+  expression: LicenseRef-E2Bus-controller-unresolved
+  scope: Selected component notice; dependency and generator/output licenses must be considered separately.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/wzab/e2bus/blob/caa9dbbade06a640b931a0cbf0506d2cf88f012d/fpga/src/e2bus.vhd
+    revision: caa9dbbade06a640b931a0cbf0506d2cf88f012d
+    accessed: '2026-09-26'
+    scope: fpga/src/e2bus.vhd
+    details: Selected source or component-specific licensing notice inspected.
+interfaces:
+- Ethernet
+- local bus
+fpga_families: []
+toolchains: []
+reuse_scope: ecosystem
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source implementation inspected; target-specific qualification remains necessary.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://github.com/wzab/e2bus/blob/caa9dbbade06a640b931a0cbf0506d2cf88f012d/fpga/src/e2bus.vhd
+    revision: caa9dbbade06a640b931a0cbf0506d2cf88f012d
+    accessed: '2026-09-26'
+    scope: fpga/src/e2bus.vhd
+    details: Inspected entity/API, source comments, dependencies and implementation. No execution.
+documentation:
+  status: present
+  summary: Component documentation/API describes integration constraints.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/wzab/e2bus/blob/caa9dbbade06a640b931a0cbf0506d2cf88f012d/README.md
+    revision: caa9dbbade06a640b931a0cbf0506d2cf88f012d
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Component-level documentation inspected.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_testbench:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  self_checking_testbench:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_ci:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  synthesis:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+verification_frameworks: []
+limitations:
+- kind: architecture
+  summary: README calls this proof-of-concept; verify software, MAC/PHY and bus-error behavior before
+    adoption.
+  evidence:
+  - type: our_review
+    url: https://github.com/wzab/e2bus/blob/caa9dbbade06a640b931a0cbf0506d2cf88f012d/README.md
+    revision: caa9dbbade06a640b931a0cbf0506d2cf88f012d
+    accessed: '2026-09-26'
+    scope: README.md
+    details: README calls this proof-of-concept; verify software, MAC/PHY and bus-error behavior before
+      adoption.
+- kind: license
+  summary: Main controller lacks explicit license; other files have dual LGPL/BSD or unknown RAM terms.
+    Do not infer blanket permission.
+  evidence:
+  - type: our_review
+    url: https://github.com/wzab/e2bus/blob/caa9dbbade06a640b931a0cbf0506d2cf88f012d/fpga/src/eth1g/dpram_inf_scl.vhd
+    revision: caa9dbbade06a640b931a0cbf0506d2cf88f012d
+    accessed: '2026-09-26'
+    scope: fpga/src/eth1g/dpram_inf_scl.vhd
+    details: Main controller lacks explicit license; other files have dual LGPL/BSD or unknown RAM terms.
+      Do not infer blanket permission.
+our_usage: []
+rejected_for: []
+selection:
+  status: reference_only
+  reason: Architecture/integration reference; resolve the recorded limitations before reuse.
+  evidence:
+  - *id001
+reviewed_at: '2026-09-26'

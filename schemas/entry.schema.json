@@ -1,0 +1,827 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/codex-hil/gateware-knowledge-base/schemas/entry.schema.json",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/project"
+    },
+    {
+      "$ref": "#/$defs/ip"
+    }
+  ],
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "enum": [
+            "source_inspection",
+            "upstream_claim",
+            "upstream_ci",
+            "upstream_artifact",
+            "third_party_report",
+            "our_simulation",
+            "our_synthesis",
+            "our_place_and_route",
+            "our_bitstream",
+            "our_hardware",
+            "our_hil",
+            "our_ci",
+            "our_review"
+          ]
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "revision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "accessed": {
+          "type": "string",
+          "format": "date"
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "details": {
+          "type": "string",
+          "minLength": 1
+        },
+        "toolchain": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fpga": {
+          "type": "string",
+          "minLength": 1
+        },
+        "report": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "type",
+        "url",
+        "accessed",
+        "scope",
+        "details"
+      ]
+    },
+    "fact": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "unknown",
+            "present",
+            "claimed",
+            "passed",
+            "failed",
+            "partial",
+            "not_supported",
+            "not_applicable"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "status",
+        "summary",
+        "evidence"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "not": {
+                  "const": "unknown"
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "evidence": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "compatibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "claimed",
+            "integration_present",
+            "tested",
+            "unsupported"
+          ]
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "required": [
+        "name",
+        "status",
+        "scope",
+        "evidence"
+      ]
+    },
+    "issue": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "bug",
+            "unsupported_mode",
+            "toolchain",
+            "architecture",
+            "maintenance",
+            "license",
+            "resources",
+            "verification_gap"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "required": [
+        "kind",
+        "summary",
+        "evidence"
+      ]
+    },
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": 1
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "const": "project"
+        },
+        "repository": {
+          "type": "string",
+          "format": "uri"
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "organization": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "string",
+          "pattern": "^(?:[0-9a-f]{40}|svn:[1-9][0-9]*)$"
+        },
+        "inspected_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "inspection_scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "license": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "expression": {
+              "type": "string",
+              "minLength": 1
+            },
+            "scope": {
+              "type": "string",
+              "minLength": 1
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/evidence"
+              },
+              "uniqueItems": true,
+              "minItems": 1
+            }
+          },
+          "required": [
+            "expression",
+            "scope",
+            "evidence"
+          ]
+        },
+        "maintenance": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "enum": [
+                "active",
+                "unknown",
+                "dormant",
+                "deprecated",
+                "archived",
+                "moved"
+              ]
+            },
+            "summary": {
+              "type": "string",
+              "minLength": 1
+            },
+            "observed_head_date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "last_meaningful_activity": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/evidence"
+              },
+              "uniqueItems": true,
+              "minItems": 1
+            }
+          },
+          "required": [
+            "status",
+            "summary",
+            "observed_head_date",
+            "last_meaningful_activity",
+            "evidence"
+          ]
+        },
+        "documentation": {
+          "$ref": "#/$defs/fact"
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/issue"
+          },
+          "uniqueItems": true
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "verification": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "source": {
+              "$ref": "#/$defs/fact"
+            },
+            "elaboration": {
+              "$ref": "#/$defs/fact"
+            },
+            "upstream_testbench": {
+              "$ref": "#/$defs/fact"
+            },
+            "self_checking_testbench": {
+              "$ref": "#/$defs/fact"
+            },
+            "simulation": {
+              "$ref": "#/$defs/fact"
+            },
+            "formal": {
+              "$ref": "#/$defs/fact"
+            },
+            "upstream_ci": {
+              "$ref": "#/$defs/fact"
+            },
+            "synthesis": {
+              "$ref": "#/$defs/fact"
+            },
+            "place_and_route": {
+              "$ref": "#/$defs/fact"
+            },
+            "bitstream": {
+              "$ref": "#/$defs/fact"
+            },
+            "hardware_smoke": {
+              "$ref": "#/$defs/fact"
+            },
+            "functional_hil": {
+              "$ref": "#/$defs/fact"
+            },
+            "independent_validation": {
+              "$ref": "#/$defs/fact"
+            },
+            "production_deployment": {
+              "$ref": "#/$defs/fact"
+            }
+          },
+          "required": [
+            "source",
+            "elaboration",
+            "upstream_testbench",
+            "self_checking_testbench",
+            "simulation",
+            "formal",
+            "upstream_ci",
+            "synthesis",
+            "place_and_route",
+            "bitstream",
+            "hardware_smoke",
+            "functional_hil",
+            "independent_validation",
+            "production_deployment"
+          ]
+        },
+        "vcs": {
+          "enum": [
+            "git",
+            "svn"
+          ],
+          "default": "git"
+        }
+      },
+      "required": [
+        "schema_version",
+        "id",
+        "name",
+        "kind",
+        "repository",
+        "aliases",
+        "organization",
+        "revision",
+        "inspected_at",
+        "inspection_scope",
+        "license",
+        "maintenance",
+        "documentation",
+        "limitations",
+        "evidence",
+        "verification"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "required": [
+              "vcs"
+            ],
+            "properties": {
+              "vcs": {
+                "const": "svn"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "revision": {
+                "pattern": "^svn:[1-9][0-9]*$"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "revision": {
+                "pattern": "^[0-9a-f]{40}$"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ip": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": 1
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "const": "ip"
+        },
+        "project": {
+          "type": "string",
+          "minLength": 1
+        },
+        "upstream_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "enum": [
+            "cdc",
+            "fifo",
+            "spi",
+            "i2c",
+            "uart",
+            "ethernet",
+            "serdes",
+            "timing",
+            "bus",
+            "dsp",
+            "lockin",
+            "control",
+            "adc-dac",
+            "memory",
+            "debug",
+            "misc"
+          ]
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "language": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "license": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "expression": {
+              "type": "string",
+              "minLength": 1
+            },
+            "scope": {
+              "type": "string",
+              "minLength": 1
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/evidence"
+              },
+              "uniqueItems": true,
+              "minItems": 1
+            }
+          },
+          "required": [
+            "expression",
+            "scope",
+            "evidence"
+          ]
+        },
+        "interfaces": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "fpga_families": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/compatibility"
+          },
+          "uniqueItems": true
+        },
+        "toolchains": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/compatibility"
+          },
+          "uniqueItems": true
+        },
+        "reuse_scope": {
+          "enum": [
+            "general",
+            "ecosystem",
+            "platform",
+            "system"
+          ]
+        },
+        "lifecycle": {
+          "enum": [
+            "discovered",
+            "evaluated",
+            "simulation-tested",
+            "synthesis-tested",
+            "hardware-tested",
+            "HIL-validated",
+            "production-used"
+          ]
+        },
+        "completeness": {
+          "$ref": "#/$defs/fact"
+        },
+        "documentation": {
+          "$ref": "#/$defs/fact"
+        },
+        "verification": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "source": {
+              "$ref": "#/$defs/fact"
+            },
+            "elaboration": {
+              "$ref": "#/$defs/fact"
+            },
+            "upstream_testbench": {
+              "$ref": "#/$defs/fact"
+            },
+            "self_checking_testbench": {
+              "$ref": "#/$defs/fact"
+            },
+            "simulation": {
+              "$ref": "#/$defs/fact"
+            },
+            "formal": {
+              "$ref": "#/$defs/fact"
+            },
+            "upstream_ci": {
+              "$ref": "#/$defs/fact"
+            },
+            "synthesis": {
+              "$ref": "#/$defs/fact"
+            },
+            "place_and_route": {
+              "$ref": "#/$defs/fact"
+            },
+            "bitstream": {
+              "$ref": "#/$defs/fact"
+            },
+            "hardware_smoke": {
+              "$ref": "#/$defs/fact"
+            },
+            "functional_hil": {
+              "$ref": "#/$defs/fact"
+            },
+            "independent_validation": {
+              "$ref": "#/$defs/fact"
+            },
+            "production_deployment": {
+              "$ref": "#/$defs/fact"
+            }
+          },
+          "required": [
+            "source",
+            "elaboration",
+            "upstream_testbench",
+            "self_checking_testbench",
+            "simulation",
+            "formal",
+            "upstream_ci",
+            "synthesis",
+            "place_and_route",
+            "bitstream",
+            "hardware_smoke",
+            "functional_hil",
+            "independent_validation",
+            "production_deployment"
+          ]
+        },
+        "verification_frameworks": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/issue"
+          },
+          "uniqueItems": true
+        },
+        "our_usage": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "project": {
+                "type": "string",
+                "minLength": 1
+              },
+              "module": {
+                "type": "string",
+                "minLength": 1
+              },
+              "role": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "enum": [
+                  "discovered",
+                  "evaluated",
+                  "simulation-tested",
+                  "synthesis-tested",
+                  "hardware-tested",
+                  "HIL-validated",
+                  "production-used"
+                ]
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/evidence"
+                },
+                "uniqueItems": true,
+                "minItems": 1
+              }
+            },
+            "required": [
+              "project",
+              "module",
+              "role",
+              "status",
+              "evidence"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "rejected_for": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "project": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              },
+              "date": {
+                "type": "string",
+                "format": "date"
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/evidence"
+                },
+                "uniqueItems": true,
+                "minItems": 1
+              }
+            },
+            "required": [
+              "project",
+              "reason",
+              "date",
+              "evidence"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "selection": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "enum": [
+                "candidate",
+                "reference_only",
+                "rejected",
+                "selected"
+              ]
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/evidence"
+              },
+              "uniqueItems": true,
+              "minItems": 1
+            }
+          },
+          "required": [
+            "status",
+            "reason",
+            "evidence"
+          ]
+        },
+        "reviewed_at": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "schema_version",
+        "id",
+        "name",
+        "kind",
+        "project",
+        "upstream_path",
+        "summary",
+        "category",
+        "tags",
+        "language",
+        "license",
+        "interfaces",
+        "fpga_families",
+        "toolchains",
+        "reuse_scope",
+        "lifecycle",
+        "completeness",
+        "documentation",
+        "verification",
+        "verification_frameworks",
+        "limitations",
+        "our_usage",
+        "rejected_for",
+        "selection",
+        "reviewed_at"
+      ]
+    }
+  }
+}

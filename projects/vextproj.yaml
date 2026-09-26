@@ -1,0 +1,106 @@
+schema_version: 1
+kind: project
+id: vextproj
+name: vextproj
+repository: https://github.com/wzab/vextproj
+aliases: []
+organization: Wojciech M. Zabołotny and contributors; see source-level credits
+revision: 34015a4dd110a37212a8e88f5a74e5555126ef9c
+inspected_at: '2026-09-26'
+inspection_scope: Selected source files, source notices, test harnesses and documentation inspected; no
+  HDL run or build.
+license:
+  expression: CC0-1.0
+  scope: README declares CC0 for VEXTPROJ; copied IPbus and other demo dependencies need separate review.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://github.com/wzab/vextproj/blob/34015a4dd110a37212a8e88f5a74e5555126ef9c/README.md
+    revision: 34015a4dd110a37212a8e88f5a74e5555126ef9c
+    accessed: '2026-09-26'
+    scope: README.md
+    details: README declares CC0 for VEXTPROJ; copied IPbus and other demo dependencies need separate
+      review.
+maintenance:
+  status: unknown
+  summary: Pinned snapshot inspected; recent support responsiveness and last substantive code activity
+    not established.
+  observed_head_date: '2025-10-25'
+  last_meaningful_activity: null
+  evidence:
+  - type: source_inspection
+    url: https://github.com/wzab/vextproj/commit/34015a4dd110a37212a8e88f5a74e5555126ef9c
+    revision: 34015a4dd110a37212a8e88f5a74e5555126ef9c
+    accessed: '2026-09-26'
+    scope: HEAD metadata
+    details: Observed Git commit date; not treated as a proof of maintenance.
+documentation:
+  status: present
+  summary: README and selected implementation documentation inspected.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/wzab/vextproj/blob/34015a4dd110a37212a8e88f5a74e5555126ef9c/README.md
+    revision: 34015a4dd110a37212a8e88f5a74e5555126ef9c
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Project introduction inspected.
+limitations: []
+evidence:
+- *id001
+verification:
+  source:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  elaboration:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_testbench:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  self_checking_testbench:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_ci:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  synthesis:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []

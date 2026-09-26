@@ -1,0 +1,127 @@
+schema_version: 1
+kind: ip
+id: spec7-wr
+name: spec7-wr
+project: spec7
+upstream_path: hdl/board/wrc_board_spec7.vhd
+summary: SPEC7 board wrapper for White Rabbit.
+category: timing
+tags:
+- SPEC7
+- White Rabbit
+- Zynq
+language:
+- VHDL
+license:
+  expression: LGPL-2.1-or-later
+  scope: Selected source file; dependencies and generated outputs may differ.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://gitlab.com/ohwr/project/spec7/-/blob/72d2ad4fe4ff3a99975626947ab12f3dfdc8e0e2/hdl/board/wrc_board_spec7.vhd
+    revision: 72d2ad4fe4ff3a99975626947ab12f3dfdc8e0e2
+    accessed: '2026-09-26'
+    scope: hdl/board/wrc_board_spec7.vhd
+    details: Inspected source API, imports/dependencies and implementation structure; not executed.
+interfaces:
+- clock/timestamp
+fpga_families: []
+toolchains: []
+reuse_scope: platform
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source-level API and integration reviewed; completeness for a specific application remains
+    unqualified.
+  evidence:
+  - *id001
+documentation:
+  status: present
+  summary: Source API and repository documentation available; inspect linked parameters and dependencies
+    before reuse.
+  evidence:
+  - type: source_inspection
+    url: https://gitlab.com/ohwr/project/spec7/-/blob/72d2ad4fe4ff3a99975626947ab12f3dfdc8e0e2/README.md
+    revision: 72d2ad4fe4ff3a99975626947ab12f3dfdc8e0e2
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Documentation/source API reviewed; no numerical quality score assigned.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_testbench:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  self_checking_testbench:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_ci:
+    status: present
+    summary: CI configuration exists; job success and per-block coverage not established.
+    evidence:
+    - type: source_inspection
+      url: https://gitlab.com/ohwr/project/spec7/-/blob/72d2ad4fe4ff3a99975626947ab12f3dfdc8e0e2/.gitlab-ci.yml
+      revision: 72d2ad4fe4ff3a99975626947ab12f3dfdc8e0e2
+      accessed: '2026-09-26'
+      scope: project CI configuration, not a per-core result
+      details: Workflow/configuration inspected. Presence does not mean a successful CI run.
+  synthesis:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+verification_frameworks: []
+limitations: []
+our_usage: []
+rejected_for: []
+selection:
+  status: reference_only
+  reason: Integration/architecture reference; constraints require review before reuse.
+  evidence:
+  - type: our_review
+    url: https://gitlab.com/ohwr/project/spec7/-/blob/72d2ad4fe4ff3a99975626947ab12f3dfdc8e0e2/hdl/board/wrc_board_spec7.vhd
+    revision: 72d2ad4fe4ff3a99975626947ab12f3dfdc8e0e2
+    accessed: '2026-09-26'
+    scope: hdl/board/wrc_board_spec7.vhd
+    details: Integration/architecture reference; constraints require review before reuse.
+reviewed_at: '2026-09-26'

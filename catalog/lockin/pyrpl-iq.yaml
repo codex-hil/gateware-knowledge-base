@@ -1,0 +1,154 @@
+schema_version: 1
+kind: ip
+id: pyrpl-iq
+name: pyrpl-iq
+project: pyrpl
+upstream_path: pyrpl/fpga/rtl/red_pitaya_iq_block.v
+summary: IQ processing integrating oscillator, demodulation and filtering.
+category: lockin
+tags:
+- IQ demodulator
+- DDC
+- DDS
+- NCO
+- lockin
+language:
+- Verilog
+license:
+  expression: LicenseRef-PyRPL-MIT-GPL-conflict
+  scope: Selected source file; dependencies and generated outputs may differ.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://github.com/pyrpl-fpga/pyrpl/blob/7b0ac7a037a0d71f994fef42749176c8c596e186/pyrpl/fpga/rtl/red_pitaya_iq_block.v
+    revision: 7b0ac7a037a0d71f994fef42749176c8c596e186
+    accessed: '2026-09-26'
+    scope: pyrpl/fpga/rtl/red_pitaya_iq_block.v
+    details: Inspected source API, imports/dependencies and implementation structure; not executed.
+interfaces:
+- IQ samples
+fpga_families:
+- name: Zynq-7000
+  status: claimed
+  scope: Red Pitaya platform association; no independent family-wide portability claim.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/pyrpl-fpga/pyrpl/blob/7b0ac7a037a0d71f994fef42749176c8c596e186/README.md
+    revision: 7b0ac7a037a0d71f994fef42749176c8c596e186
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Red Pitaya platform association; no independent family-wide portability claim.
+toolchains: []
+reuse_scope: platform
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source-level API and integration reviewed; completeness for a specific application remains
+    unqualified.
+  evidence:
+  - *id001
+documentation:
+  status: present
+  summary: Source API and repository documentation available; inspect linked parameters and dependencies
+    before reuse.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/pyrpl-fpga/pyrpl/blob/7b0ac7a037a0d71f994fef42749176c8c596e186/README.md
+    revision: 7b0ac7a037a0d71f994fef42749176c8c596e186
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Documentation/source API reviewed; no numerical quality score assigned.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_testbench:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  self_checking_testbench:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_ci:
+    status: present
+    summary: CI configuration exists; job success and per-block coverage not established.
+    evidence:
+    - type: source_inspection
+      url: https://github.com/pyrpl-fpga/pyrpl/blob/7b0ac7a037a0d71f994fef42749176c8c596e186/.github/workflows/ci.yml
+      revision: 7b0ac7a037a0d71f994fef42749176c8c596e186
+      accessed: '2026-09-26'
+      scope: project CI configuration, not a per-core result
+      details: Workflow/configuration inspected. Presence does not mean a successful CI run.
+  synthesis:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+verification_frameworks: []
+limitations:
+- kind: architecture
+  summary: Check per-file notices and Red Pitaya bus/clock assumptions; Python package CI is not HDL simulation
+    evidence.
+  evidence:
+  - type: our_review
+    url: https://github.com/pyrpl-fpga/pyrpl/blob/7b0ac7a037a0d71f994fef42749176c8c596e186/pyrpl/fpga/rtl/red_pitaya_iq_block.v
+    revision: 7b0ac7a037a0d71f994fef42749176c8c596e186
+    accessed: '2026-09-26'
+    scope: pyrpl/fpga/rtl/red_pitaya_iq_block.v
+    details: Engineering interpretation from the cited source; application fit requires review.
+- kind: license
+  summary: MIT root notice conflicts with retained GPL-3.0-or-later RTL headers. Treat as unresolved for
+    permissive-only reuse.
+  evidence:
+  - *id001
+our_usage: []
+rejected_for: []
+selection:
+  status: reference_only
+  reason: Integration/architecture reference; constraints require review before reuse.
+  evidence:
+  - type: our_review
+    url: https://github.com/pyrpl-fpga/pyrpl/blob/7b0ac7a037a0d71f994fef42749176c8c596e186/pyrpl/fpga/rtl/red_pitaya_iq_block.v
+    revision: 7b0ac7a037a0d71f994fef42749176c8c596e186
+    accessed: '2026-09-26'
+    scope: pyrpl/fpga/rtl/red_pitaya_iq_block.v
+    details: Integration/architecture reference; constraints require review before reuse.
+reviewed_at: '2026-09-26'
