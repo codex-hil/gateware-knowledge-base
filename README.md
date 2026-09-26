@@ -4,7 +4,7 @@ Search here before implementing reusable gateware. Evaluate suitable upstream IP
 
 This is technical memory for MODULIQ, AI-HIL, ARTIQ/quantum control, instrumentation and DSP work. It records scoped evidence and negative findings, not quality scores. No third-party source code is vendored.
 
-Start with the [generated catalogue](docs/index.md), [initial review](reports/initial-review.md), [schema guide](docs/schema.md), and [agent instructions](AGENTS.md).
+Start with the [generated catalogue](docs/index.md), [initial review](reports/initial-review.md), [OpenCores/WZab follow-up](reports/opencores-wzab-review.md), [schema guide](docs/schema.md), and [agent instructions](AGENTS.md).
 
 ## Use
 
@@ -17,6 +17,8 @@ python3 -m pip install -r requirements.txt
 ./ip-search spi
 ./ip-search "100base fx"
 ./ip-search lockin
+./ip-search Zabołotny
+./ip-search opencores
 ./ip-search --fpga ecp5 --toolchain yosys ethernet
 ./ip-search --hdl VHDL --license CERN-OHL-W fifo
 ./ip-search --verification formal=present
@@ -24,7 +26,7 @@ python3 -m pip install -r requirements.txt
 ./ip-search --toolchain yosys --compatibility tested
 ```
 
-The initial seed contains **28 inspected projects and 90 separately identified IP blocks or subsystems**. Those include tightly coupled board/system integrations marked as references. They are not 90 independently qualified drop-in cores. All adoption decisions still require application requirements and dependency review.
+The catalogue contains **40 reviewed projects and 105 separately identified IP blocks or subsystems**, including the OpenCores/WZab follow-up. Four OpenCores projects currently have documentation/test-harness review only; their RTL harvest is deferred. Those include tightly coupled board/system integrations marked as references. They are not 105 independently qualified drop-in cores. All adoption decisions still require application requirements and dependency review.
 
 A toolchain match may mean an integration script exists. Use `--compatibility tested` to require result-backed compatibility. A bare `--verification synthesis` means `synthesis=passed`. The seed intentionally returns no synthesis passes. Empty family/toolchain lists mean unknown, not universal compatibility. Search includes reference-only and rejected entries so previous investigations remain visible.
 

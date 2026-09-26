@@ -1,0 +1,141 @@
+schema_version: 1
+kind: ip
+id: opencores-i2c-master
+name: OpenCores Wishbone I2C master
+project: opencores-i2c
+upstream_path: rtl/verilog/i2c_master_top.v
+summary: Register-controlled I2C master with prescaling, interrupt and subordinate byte/bit controllers.
+category: i2c
+tags:
+- opencores
+- I2C master
+language:
+- Verilog
+license:
+  expression: LicenseRef-OpenCores-I2C-notice
+  scope: Selected component notice; dependency and generator/output licenses must be considered separately.
+  evidence:
+  - type: source_inspection
+    url: https://opencores.org/ocsvn/i2c/!svn/bc/76/i2c/trunk/rtl/verilog/i2c_master_top.v
+    revision: svn:76
+    accessed: '2026-09-26'
+    scope: rtl/verilog/i2c_master_top.v
+    details: Selected source or component-specific licensing notice inspected.
+interfaces:
+- Wishbone B.2
+- I2C
+fpga_families: []
+toolchains: []
+reuse_scope: general
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source implementation inspected; target-specific qualification remains necessary.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://opencores.org/ocsvn/i2c/!svn/bc/76/i2c/trunk/rtl/verilog/i2c_master_top.v
+    revision: svn:76
+    accessed: '2026-09-26'
+    scope: rtl/verilog/i2c_master_top.v
+    details: Inspected entity/API, source comments, dependencies and implementation. No execution.
+documentation:
+  status: present
+  summary: Component documentation/API describes integration constraints.
+  evidence:
+  - type: source_inspection
+    url: https://opencores.org/ocsvn/i2c/!svn/bc/76/i2c/trunk/rtl/verilog/i2c_master_top.v
+    revision: svn:76
+    accessed: '2026-09-26'
+    scope: rtl/verilog/i2c_master_top.v
+    details: Component-level documentation inspected.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_testbench:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  self_checking_testbench:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_ci:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  synthesis:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+verification_frameworks: []
+limitations:
+- kind: architecture
+  summary: Source identifies Wishbone B.2; check bus revision compatibility and open-drain I/O enable
+    polarity for the target integration.
+  evidence:
+  - type: our_review
+    url: https://opencores.org/ocsvn/i2c/!svn/bc/76/i2c/trunk/rtl/verilog/i2c_master_top.v
+    revision: svn:76
+    accessed: '2026-09-26'
+    scope: rtl/verilog/i2c_master_top.v
+    details: Source identifies Wishbone B.2; check bus revision compatibility and open-drain I/O enable
+      polarity for the target integration.
+- kind: verification_gap
+  summary: Only top-level source retrieved in this pass; byte/bit-controller behavior and matching regressions
+    remain to be inspected.
+  evidence:
+  - type: our_review
+    url: https://opencores.org/ocsvn/i2c/!svn/bc/76/i2c/trunk/rtl/verilog/i2c_master_top.v
+    revision: svn:76
+    accessed: '2026-09-26'
+    scope: rtl/verilog/i2c_master_top.v
+    details: Only top-level source retrieved in this pass; byte/bit-controller behavior and matching regressions
+      remain to be inspected.
+our_usage: []
+rejected_for: []
+selection:
+  status: candidate
+  reason: Candidate for requirements-specific evaluation; no local adoption or test result claimed.
+  evidence:
+  - *id001
+reviewed_at: '2026-09-26'

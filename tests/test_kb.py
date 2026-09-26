@@ -134,6 +134,28 @@ class CatalogueTests(unittest.TestCase):
         self.assertTrue(kb.matches('lockin',['digital lock-in']))
         self.assertTrue(kb.matches('100base fx',['100BASE-FX']))
         self.assertTrue(kb.matches('axi stream',['AXI-Stream']))
+        self.assertTrue(kb.matches('Zabołotny',['Wojciech Zabolotny']))
+
+    def test_author_search(self):
+        path=self.root/'projects/liteeth.yaml'
+        project=yaml.safe_load(path.read_text())
+        project['organization']='Wojciech M. Zabołotny'
+        path.write_text(yaml.safe_dump(project))
+        self.assertEqual(len(self.search(query=['Zabolotny'])),1)
+
+    def test_svn_revision_is_explicit_and_pinned(self):
+        path=self.root/'projects/liteeth.yaml'
+        project=yaml.safe_load(path.read_text())
+        project.update(vcs='svn',revision='svn:76')
+        project['maintenance']['observed_head_date']=None
+        path.write_text(yaml.safe_dump(project))
+        self.assertEqual(kb.validate(self.root),[])
+        project['revision']='HEAD'
+        path.write_text(yaml.safe_dump(project))
+        self.assertTrue(kb.validate(self.root))
+        project.pop('vcs');project['revision']='svn:76'
+        path.write_text(yaml.safe_dump(project))
+        self.assertTrue(kb.validate(self.root))
 
 
 if __name__=='__main__':unittest.main()

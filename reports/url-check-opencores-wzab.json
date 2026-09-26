@@ -1,0 +1,311 @@
+{
+  "checked_at": "2026-09-26T11:26:37.649337+00:00",
+  "scope": "canonical repositories and aliases",
+  "note": "HTTP reachability is not evidence of IP quality. Access failures are inconclusive; redirects require review, never automatic rewriting.",
+  "results": [
+    {
+      "url": "https://git.m-labs.hk/M-Labs/artiq",
+      "final_url": "https://git.m-labs.hk/M-Labs/artiq",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://git.m-labs.hk/M-Labs/artiq-zynq",
+      "final_url": "https://git.m-labs.hk/M-Labs/artiq-zynq",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://git.m-labs.hk/M-Labs/misoc",
+      "final_url": "https://git.m-labs.hk/M-Labs/misoc",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/GibbleLab/FPGA",
+      "final_url": "https://github.com/GibbleLab/FPGA",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/RedPitaya/RedPitaya-FPGA",
+      "final_url": "https://github.com/RedPitaya/RedPitaya-FPGA",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/ZipCPU/cordic",
+      "final_url": "https://github.com/ZipCPU/cordic",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/ZipCPU/wb2axip",
+      "final_url": "https://github.com/ZipCPU/wb2axip",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/ahmedshahein/DSP-RTL-Lib",
+      "final_url": "https://github.com/ahmedshahein/DSP-RTL-Lib",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/alexforencich/verilog-axis",
+      "final_url": "https://github.com/alexforencich/verilog-axis",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/alexforencich/verilog-ethernet",
+      "final_url": "https://github.com/alexforencich/verilog-ethernet",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/enjoy-digital/litedram",
+      "final_url": "https://github.com/enjoy-digital/litedram",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/enjoy-digital/liteeth",
+      "final_url": "https://github.com/enjoy-digital/liteeth",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/enjoy-digital/liteiclink",
+      "final_url": "https://github.com/enjoy-digital/liteiclink",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/enjoy-digital/litejesd204",
+      "final_url": "https://github.com/enjoy-digital/litejesd204",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/enjoy-digital/litejesd204b",
+      "final_url": "https://github.com/enjoy-digital/litejesd204",
+      "http_status": 200,
+      "status": "moved"
+    },
+    {
+      "url": "https://github.com/enjoy-digital/litepcie",
+      "final_url": "https://github.com/enjoy-digital/litepcie",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/enjoy-digital/litescope",
+      "final_url": "https://github.com/enjoy-digital/litescope",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/enjoy-digital/litex",
+      "final_url": "https://github.com/enjoy-digital/litex",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/fpganinja/taxi",
+      "final_url": "https://github.com/fpganinja/taxi",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/linien-org/linien",
+      "final_url": "https://github.com/linien-org/linien",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/m-labs/artiq",
+      "final_url": "https://github.com/m-labs/artiq",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier",
+      "final_url": "https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/pyrpl-fpga/pyrpl",
+      "final_url": "https://github.com/pyrpl-fpga/pyrpl",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/quartiq/phaser",
+      "final_url": "https://github.com/quartiq/phaser",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/wzab/addr_gen_wb",
+      "final_url": "https://github.com/wzab/addr_gen_wb",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/wzab/agwb",
+      "final_url": "https://github.com/wzab/agwb",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/wzab/e2bus",
+      "final_url": "https://github.com/wzab/e2bus",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/wzab/vextproj",
+      "final_url": "https://github.com/wzab/vextproj",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/wzab/wzab-hdl-library",
+      "final_url": "https://github.com/wzab/wzab-hdl-library",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://gitlab.com/WZabISE/concentrator",
+      "final_url": "https://gitlab.com/WZabISE/concentrator",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://gitlab.com/WZabISE/xconcentrator",
+      "final_url": "https://gitlab.com/WZabISE/xconcentrator",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://gitlab.com/colibri-cern/colibri",
+      "final_url": "https://gitlab.com/colibri-cern/colibri",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://gitlab.com/ohwr/project/general-cores",
+      "final_url": "https://gitlab.com/ohwr/project/general-cores",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://gitlab.com/ohwr/project/spec",
+      "final_url": "https://gitlab.com/ohwr/project/spec",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://gitlab.com/ohwr/project/spec7",
+      "final_url": "https://gitlab.com/ohwr/project/spec7",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://gitlab.com/ohwr/project/wr-cores",
+      "final_url": "https://gitlab.com/ohwr/project/wr-cores",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://gitlab.com/ohwr/project/wren",
+      "final_url": "https://gitlab.com/ohwr/project/wren",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://opencores.org/ocsvn/fade_ether_protocol/fade_ether_protocol/trunk",
+      "final_url": "https://opencores.org/ocsvn/fade_ether_protocol/fade_ether_protocol/trunk",
+      "http_status": null,
+      "status": "transient_error",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "url": "https://opencores.org/ocsvn/heap_sorter/heap_sorter/trunk",
+      "final_url": "https://opencores.org/ocsvn/heap_sorter/heap_sorter/trunk",
+      "http_status": null,
+      "status": "transient_error",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "url": "https://opencores.org/ocsvn/i2c/i2c/trunk",
+      "final_url": "https://opencores.org/ocsvn/i2c/i2c/trunk/",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://opencores.org/ocsvn/lateq/lateq/trunk",
+      "final_url": "https://opencores.org/ocsvn/lateq/lateq/trunk",
+      "http_status": null,
+      "status": "transient_error",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "url": "https://opencores.org/ocsvn/verilog_cordic_core/verilog_cordic_core/trunk",
+      "final_url": "https://opencores.org/ocsvn/verilog_cordic_core/verilog_cordic_core/trunk",
+      "http_status": null,
+      "status": "transient_error",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "url": "https://opencores.org/ocsvn/versatile_fft/versatile_fft/trunk",
+      "final_url": "https://opencores.org/ocsvn/versatile_fft/versatile_fft/trunk",
+      "http_status": null,
+      "status": "transient_error",
+      "error": "The read operation timed out"
+    },
+    {
+      "url": "https://opencores.org/projects/fade_ether_protocol",
+      "final_url": "https://opencores.org/projects/fade_ether_protocol",
+      "http_status": null,
+      "status": "transient_error",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "url": "https://opencores.org/projects/heap_sorter",
+      "final_url": "https://opencores.org/projects/heap_sorter",
+      "http_status": null,
+      "status": "transient_error",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "url": "https://opencores.org/projects/i2c",
+      "final_url": "https://opencores.org/projects/i2c",
+      "http_status": null,
+      "status": "transient_error",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "url": "https://opencores.org/projects/lateq",
+      "final_url": "https://opencores.org/projects/lateq",
+      "http_status": null,
+      "status": "transient_error",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "url": "https://opencores.org/projects/verilog_cordic_core",
+      "final_url": "https://opencores.org/projects/verilog_cordic_core",
+      "http_status": null,
+      "status": "transient_error",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "url": "https://opencores.org/projects/versatile_fft",
+      "final_url": "https://opencores.org/projects/versatile_fft",
+      "http_status": 200,
+      "status": "reachable"
+    }
+  ]
+}

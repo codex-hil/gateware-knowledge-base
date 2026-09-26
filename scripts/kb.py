@@ -4,6 +4,7 @@ import argparse
 import json
 import re
 import sys
+import unicodedata
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
 
@@ -142,7 +143,8 @@ ALIASES = {'ecp5':['lfe5u','lfe5um'], 'lockin':['lock-in','lock in'],
            'axi stream':['axi-stream','axis'], 'yosys':['yosys-nextpnr']}
 
 def normalize(text):
-    return re.sub(r'[^a-z0-9]+', '', text.lower())
+    text = unicodedata.normalize('NFKD', text.lower().replace('ł', 'l'))
+    return re.sub(r'[^a-z0-9]+', '', text)
 
 def matches(query, values):
     choices = [query, *ALIASES.get(query.lower(), [])]
@@ -156,7 +158,8 @@ def search(args, root=ROOT):
         if core['kind'] != 'ip':
             continue
         project = projects[core['project']]
-        fields = [core['id'],core['name'],core['summary'],*core['tags'],*core['interfaces']]
+        fields = [core['id'],core['name'],core['summary'],*core['tags'],*core['interfaces'],
+                  project['name'], project['organization']]
         if not all(matches(q, fields) for q in args.query):
             continue
         if args.hdl and not matches(args.hdl, core['language']):

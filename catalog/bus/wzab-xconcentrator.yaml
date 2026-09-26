@@ -1,0 +1,165 @@
+schema_version: 1
+kind: ip
+id: wzab-xconcentrator
+name: Scalable baseline-network concentrator
+project: xconcentrator
+upstream_path: src/bnet_concentrator.vhd
+summary: Compact sparse parallel input records into output groups for triggerless data acquisition.
+category: bus
+tags:
+- wzab
+- Zabolotny
+- stream processing
+- concentrator
+- DAQ
+language:
+- VHDL
+license:
+  expression: LicenseRef-Dual-GPL-BSD-unspecified
+  scope: Selected component notice; dependency and generator/output licenses must be considered separately.
+  evidence:
+  - type: source_inspection
+    url: https://gitlab.com/WZabISE/xconcentrator/-/blob/e740ca6f0818e9919e74fe0c5cc3349224ef6c06/src/bnet_concentrator.vhd
+    revision: e740ca6f0818e9919e74fe0c5cc3349224ef6c06
+    accessed: '2026-09-26'
+    scope: src/bnet_concentrator.vhd
+    details: Selected source or component-specific licensing notice inspected.
+interfaces:
+- typed data arrays
+- data valid
+fpga_families: []
+toolchains:
+- name: GHDL
+  status: integration_present
+  scope: Simulation recipe present.
+  evidence:
+  - type: source_inspection
+    url: https://gitlab.com/WZabISE/xconcentrator/-/blob/e740ca6f0818e9919e74fe0c5cc3349224ef6c06/README.md
+    revision: e740ca6f0818e9919e74fe0c5cc3349224ef6c06
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Simulation recipe present.
+reuse_scope: general
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source implementation inspected; target-specific qualification remains necessary.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://gitlab.com/WZabISE/xconcentrator/-/blob/e740ca6f0818e9919e74fe0c5cc3349224ef6c06/src/bnet_concentrator.vhd
+    revision: e740ca6f0818e9919e74fe0c5cc3349224ef6c06
+    accessed: '2026-09-26'
+    scope: src/bnet_concentrator.vhd
+    details: Inspected entity/API, source comments, dependencies and implementation. No execution.
+documentation:
+  status: present
+  summary: Component documentation/API describes integration constraints.
+  evidence:
+  - type: source_inspection
+    url: https://gitlab.com/WZabISE/xconcentrator/-/blob/e740ca6f0818e9919e74fe0c5cc3349224ef6c06/README.md
+    revision: e740ca6f0818e9919e74fe0c5cc3349224ef6c06
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Component-level documentation inspected.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_testbench:
+    status: present
+    summary: Matching testbench source inspected; no run collected.
+    evidence:
+    - type: source_inspection
+      url: https://gitlab.com/WZabISE/xconcentrator/-/blob/e740ca6f0818e9919e74fe0c5cc3349224ef6c06/src/bnet_concentrator_tb.vhd
+      revision: e740ca6f0818e9919e74fe0c5cc3349224ef6c06
+      accessed: '2026-09-26'
+      scope: src/bnet_concentrator_tb.vhd
+      details: Testbench exists; presence is not a pass.
+  self_checking_testbench:
+    status: present
+    summary: Output checks found; coverage and harness exit behavior require review.
+    evidence:
+    - type: source_inspection
+      url: https://gitlab.com/WZabISE/xconcentrator/-/blob/e740ca6f0818e9919e74fe0c5cc3349224ef6c06/sim/check.py
+      revision: e740ca6f0818e9919e74fe0c5cc3349224ef6c06
+      accessed: '2026-09-26'
+      scope: sim/check.py
+      details: Result comparison code inspected.
+  simulation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_ci:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  synthesis:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+verification_frameworks:
+- GHDL
+limitations:
+- kind: license
+  summary: Dual GPL/BSD header does not specify exact versions or BSD clause count.
+  evidence:
+  - type: our_review
+    url: https://gitlab.com/WZabISE/xconcentrator/-/blob/e740ca6f0818e9919e74fe0c5cc3349224ef6c06/src/bnet_concentrator.vhd
+    revision: e740ca6f0818e9919e74fe0c5cc3349224ef6c06
+    accessed: '2026-09-26'
+    scope: src/bnet_concentrator.vhd
+    details: Dual GPL/BSD header does not specify exact versions or BSD clause count.
+- kind: verification_gap
+  summary: sim/check.py checks consecutive output values but accepts an empty file; add a nonempty/count
+    requirement in qualification.
+  evidence:
+  - type: our_review
+    url: https://gitlab.com/WZabISE/xconcentrator/-/blob/e740ca6f0818e9919e74fe0c5cc3349224ef6c06/sim/check.py
+    revision: e740ca6f0818e9919e74fe0c5cc3349224ef6c06
+    accessed: '2026-09-26'
+    scope: sim/check.py
+    details: sim/check.py checks consecutive output values but accepts an empty file; add a nonempty/count
+      requirement in qualification.
+our_usage: []
+rejected_for: []
+selection:
+  status: candidate
+  reason: Candidate for requirements-specific evaluation; no local adoption or test result claimed.
+  evidence:
+  - *id001
+reviewed_at: '2026-09-26'

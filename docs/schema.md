@@ -6,7 +6,7 @@
 
 | Record | Required information |
 |---|---|
-| Project | ID/name, canonical repository and aliases, author/organization, exact inspected commit, inspection date/scope, license scope, maintenance, documentation, limitations, system verification, provenance |
+| Project | ID/name, canonical repository and aliases, author/organization, exact inspected revision, inspection date/scope, license scope, maintenance, documentation, limitations, system verification, provenance |
 | IP | ID/name, project reference, exact source path, functionality/category/tags, HDL, leaf license, interfaces, family/tool compatibility, reuse scope, lifecycle, completeness, documentation, verification, limitations, our usage, rejections, selection, review date |
 
 Project references are mandatory normalization, not missing metadata: join them to obtain the canonical repository, revision, author and maintenance. `ip-search --json` returns the core together with repository, revision and maintenance. Core source paths identify a reusable block, a cohesive group in a single upstream file, or an explicitly marked system/board integration. Do not create several records with the same source identity just to increase counts.
@@ -15,7 +15,7 @@ Project references are mandatory normalization, not missing metadata: join them 
 
 Licenses use SPDX expressions where established. `LicenseRef-*` labels describe unresolved/mixed scope, not new licenses or permissions. A root license does not erase more specific notices. Aliases preserve historical repository URLs, including moves that return HTTP 200 without redirecting.
 
-Maintenance is `active`, `unknown`, `dormant`, `deprecated`, `archived`, or `moved`, with evidence. `observed_head_date` is Git metadata; it is not the last meaningful engineering change. `last_meaningful_activity` stays null unless a substantive HDL/test/integration change was reviewed. An `active` observation does not promise maintainer response times. Do not classify inactivity as abandonment without evidence.
+Maintenance is `active`, `unknown`, `dormant`, `deprecated`, `archived`, or `moved`, with evidence. `observed_head_date` is repository metadata (or null if not established); it is not the last meaningful engineering change. `last_meaningful_activity` stays null unless a substantive HDL/test/integration change was reviewed. An `active` observation does not promise maintainer response times. Do not classify inactivity as abandonment without evidence.
 
 ## Independent verification facts
 
@@ -50,3 +50,9 @@ The lifecycle states are `discovered`, `evaluated`, `simulation-tested`, `synthe
 `rejected_for` contains an actual project or explicitly named evaluation shortlist, the reason, date and evidence. Limitations distinguish bugs, unsupported modes, toolchain issues, architecture, maintenance, license, resources and verification gaps. Keep these findings when an alternative is chosen.
 
 For a concrete example, inspect [Colibri SPI master](../catalog/spi/colibri-spi-master.yaml), [ECP5 RGMII](../catalog/ethernet/liteeth-ecp5-rgmii.yaml), and [the WREN system record](../projects/wren.yaml). Future schema changes must update documentation, migration guidance, semantic validation and tests together.
+
+## Native SVN sources (backward-compatible schema extension)
+
+Git records retain a full 40-hex commit and may omit `vcs` (default `git`). Native OpenCores records set `vcs: svn` and `revision: "svn:76"`, for example. Evidence URLs use Apache SVN baselines (`/!svn/bc/76/`) to pin source files. `HEAD` and unqualified SVN revision numbers are rejected. Existing Git records need no migration. A directory HTTP modification date is not automatically the last meaningful upstream activity, so unknown dates remain null.
+
+Search includes project names and author/organization, with Unicode accent normalization, so `Zabolotny` and `Zabołotny` both find the author’s catalogued components. It returns core records; documentation-only discoveries remain visible in the project index.

@@ -233,7 +233,7 @@
         },
         "revision": {
           "type": "string",
-          "pattern": "^[0-9a-f]{40}$"
+          "pattern": "^(?:[0-9a-f]{40}|svn:[1-9][0-9]*)$"
         },
         "inspected_at": {
           "type": "string",
@@ -289,7 +289,10 @@
               "minLength": 1
             },
             "observed_head_date": {
-              "type": "string",
+              "type": [
+                "string",
+                "null"
+              ],
               "format": "date"
             },
             "last_meaningful_activity": {
@@ -397,6 +400,13 @@
             "independent_validation",
             "production_deployment"
           ]
+        },
+        "vcs": {
+          "enum": [
+            "git",
+            "svn"
+          ],
+          "default": "git"
         }
       },
       "required": [
@@ -416,6 +426,34 @@
         "limitations",
         "evidence",
         "verification"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "required": [
+              "vcs"
+            ],
+            "properties": {
+              "vcs": {
+                "const": "svn"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "revision": {
+                "pattern": "^svn:[1-9][0-9]*$"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "revision": {
+                "pattern": "^[0-9a-f]{40}$"
+              }
+            }
+          }
+        }
       ]
     },
     "ip": {
