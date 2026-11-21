@@ -1,0 +1,183 @@
+schema_version: 1
+kind: ip
+id: colibri-spi-master
+name: colibri-spi-master
+project: colibri
+upstream_path: src/io/spi/spi_master.vhdl
+summary: SPI master with configurable clock polarity and phase.
+category: spi
+tags:
+- spi
+- master
+language:
+- VHDL
+license:
+  expression: CERN-OHL-W-2.0
+  scope: Selected source file; dependencies and generated outputs may differ.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://gitlab.com/colibri-cern/colibri/-/blob/3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f/src/io/spi/spi_master.vhdl
+    revision: 3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f
+    accessed: '2026-09-26'
+    scope: src/io/spi/spi_master.vhdl
+    details: Inspected source API, imports/dependencies and implementation structure; not executed.
+interfaces:
+- SPI
+fpga_families: []
+toolchains:
+- name: Vivado
+  status: integration_present
+  scope: Project import script, not a synthesis result.
+  evidence:
+  - type: source_inspection
+    url: https://gitlab.com/colibri-cern/colibri/-/blob/3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f/utils/vivado/colibri.tcl
+    revision: 3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f
+    accessed: '2026-09-26'
+    scope: utils/vivado/colibri.tcl
+    details: Project import script, not a synthesis result.
+- name: Quartus
+  status: integration_present
+  scope: Project import script, not a synthesis result.
+  evidence:
+  - type: source_inspection
+    url: https://gitlab.com/colibri-cern/colibri/-/blob/3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f/utils/quartus/colibri.tcl
+    revision: 3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f
+    accessed: '2026-09-26'
+    scope: utils/quartus/colibri.tcl
+    details: Project import script, not a synthesis result.
+- name: NVC
+  status: integration_present
+  scope: Upstream simulation job uses NVC; job outcome uncollected.
+  evidence:
+  - type: source_inspection
+    url: https://gitlab.com/colibri-cern/colibri/-/blob/3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f/utils/ci_jobs/simulation_ci.yml
+    revision: 3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f
+    accessed: '2026-09-26'
+    scope: utils/ci_jobs/simulation_ci.yml
+    details: Upstream simulation job uses NVC; job outcome uncollected.
+reuse_scope: general
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source-level API and integration reviewed; completeness for a specific application remains
+    unqualified.
+  evidence:
+  - *id001
+documentation:
+  status: present
+  summary: Source API and repository documentation available; inspect linked parameters and dependencies
+    before reuse.
+  evidence:
+  - type: source_inspection
+    url: https://gitlab.com/colibri-cern/colibri/-/blob/3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f/src/io/readme.md
+    revision: 3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f
+    accessed: '2026-09-26'
+    scope: src/io/readme.md
+    details: Documentation/source API reviewed; no numerical quality score assigned.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_testbench:
+    status: present
+    summary: A matching upstream testbench exists; coverage is limited to its configurations.
+    evidence:
+    - type: source_inspection
+      url: https://gitlab.com/colibri-cern/colibri/-/blob/3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f/sim/io/spi/spi_master_tb.vhdl
+      revision: 3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f
+      accessed: '2026-09-26'
+      scope: sim/io/spi/spi_master_tb.vhdl
+      details: Inspected testbench source; no simulation result collected.
+  self_checking_testbench:
+    status: claimed
+    summary: Upstream component coverage table claims coverage; independent pass unestablished.
+    evidence:
+    - &id002
+      type: upstream_claim
+      url: https://gitlab.com/colibri-cern/colibri/-/blob/3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f/src/io/readme.md
+      revision: 3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f
+      accessed: '2026-09-26'
+      scope: spi_master
+      details: Component-specific upstream coverage-table row; no execution result collected.
+  simulation:
+    status: claimed
+    summary: Upstream component coverage table claims coverage; independent pass unestablished.
+    evidence:
+    - *id002
+  formal:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_ci:
+    status: present
+    summary: CI configuration exists; job success and per-block coverage not established.
+    evidence:
+    - type: source_inspection
+      url: https://gitlab.com/colibri-cern/colibri/-/blob/3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f/utils/ci_jobs/simulation_ci.yml
+      revision: 3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f
+      accessed: '2026-09-26'
+      scope: project CI configuration, not a per-core result
+      details: Workflow/configuration inspected. Presence does not mean a successful CI run.
+  synthesis:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+verification_frameworks:
+- VUnit
+limitations:
+- kind: toolchain
+  summary: Requires VHDL-2008 and the colibri library; generic types and RAM inference need tool/version
+    review.
+  evidence:
+  - type: upstream_claim
+    url: https://gitlab.com/colibri-cern/colibri/-/blob/3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f/readme.md
+    revision: 3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f
+    accessed: '2026-09-26'
+    scope: readme.md
+    details: Integration requirements and legacy tool import scripts are documented.
+our_usage: []
+rejected_for: []
+selection:
+  status: candidate
+  reason: Candidate for requirements-specific evaluation; no MODULIQ/AI-HIL adoption or validation is
+    claimed.
+  evidence:
+  - type: our_review
+    url: https://gitlab.com/colibri-cern/colibri/-/blob/3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f/src/io/spi/spi_master.vhdl
+    revision: 3fa784121ccea86d9e65b2e0dc08d2a3327f5f2f
+    accessed: '2026-09-26'
+    scope: src/io/spi/spi_master.vhdl
+    details: Candidate for requirements-specific evaluation; no MODULIQ/AI-HIL adoption or validation
+      is claimed.
+reviewed_at: '2026-09-26'

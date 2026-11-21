@@ -1,0 +1,144 @@
+schema_version: 1
+kind: ip
+id: gibblelab-cavity-pid
+name: gibblelab-cavity-pid
+project: gibblelab
+upstream_path: MCFS_HD/Sources/hdl/CavPID.v
+summary: Cavity servo PID implementation from a many-channel laboratory controller.
+category: control
+tags:
+- PID
+- laser lock
+- frequency lock
+- digital servo
+language:
+- Verilog
+license:
+  expression: CC-BY-NC-SA-3.0
+  scope: Selected source file; dependencies and generated outputs may differ.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/GibbleLab/FPGA/blob/485f437a0d63a577612ecf5bf04f3f6b5d9dc940/README.md
+    revision: 485f437a0d63a577612ecf5bf04f3f6b5d9dc940
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Repository notice used where selected file lacks explicit terms; dependency licenses require
+      separate review.
+interfaces:
+- sample/control
+fpga_families: []
+toolchains: []
+reuse_scope: platform
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source-level API and integration reviewed; completeness for a specific application remains
+    unqualified.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://github.com/GibbleLab/FPGA/blob/485f437a0d63a577612ecf5bf04f3f6b5d9dc940/MCFS_HD/Sources/hdl/CavPID.v
+    revision: 485f437a0d63a577612ecf5bf04f3f6b5d9dc940
+    accessed: '2026-09-26'
+    scope: MCFS_HD/Sources/hdl/CavPID.v
+    details: Inspected source API, imports/dependencies and implementation structure; not executed.
+documentation:
+  status: present
+  summary: Source API and repository documentation available; inspect linked parameters and dependencies
+    before reuse.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/GibbleLab/FPGA/blob/485f437a0d63a577612ecf5bf04f3f6b5d9dc940/README.md
+    revision: 485f437a0d63a577612ecf5bf04f3f6b5d9dc940
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Documentation/source API reviewed; no numerical quality score assigned.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_testbench:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  self_checking_testbench:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_ci:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  synthesis:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+verification_frameworks: []
+limitations:
+- kind: architecture
+  summary: README specifies CC-BY-NC-SA-3.0; reject for a commercial-compatible default shortlist pending
+    alternate permission. Board resource pressure is reported.
+  evidence:
+  - type: our_review
+    url: https://github.com/GibbleLab/FPGA/blob/485f437a0d63a577612ecf5bf04f3f6b5d9dc940/MCFS_HD/Sources/hdl/CavPID.v
+    revision: 485f437a0d63a577612ecf5bf04f3f6b5d9dc940
+    accessed: '2026-09-26'
+    scope: MCFS_HD/Sources/hdl/CavPID.v
+    details: Engineering interpretation from the cited source; application fit requires review.
+our_usage: []
+rejected_for:
+- project: gateware-knowledge-base-commercial-compatible-shortlist
+  reason: Excluded from the commercial-compatible default shortlist because upstream specifies a NonCommercial
+    license; retain as technical reference.
+  date: '2026-09-26'
+  evidence: &id002
+  - type: upstream_claim
+    url: https://github.com/GibbleLab/FPGA/blob/485f437a0d63a577612ecf5bf04f3f6b5d9dc940/README.md
+    revision: 485f437a0d63a577612ecf5bf04f3f6b5d9dc940
+    accessed: '2026-09-26'
+    scope: README.md
+    details: README license section specifies CC-BY-NC-SA 3.0.
+selection:
+  status: rejected
+  reason: Excluded from the commercial-compatible default shortlist because upstream specifies a NonCommercial
+    license; retain as technical reference.
+  evidence: *id002
+reviewed_at: '2026-09-26'

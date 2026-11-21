@@ -1,0 +1,107 @@
+schema_version: 1
+kind: project
+id: e2bus
+name: e2bus
+repository: https://github.com/wzab/e2bus
+aliases: []
+organization: Wojciech M. Zabołotny and contributors; see source-level credits
+revision: caa9dbbade06a640b931a0cbf0506d2cf88f012d
+inspected_at: '2026-09-26'
+inspection_scope: Selected source files, source notices, test harnesses and documentation inspected; no
+  HDL run or build.
+license:
+  expression: LicenseRef-Mixed-E2Bus-Unresolved
+  scope: No repository-wide license found; Ethernet source headers mention dual LGPL/BSD, but main controller
+    has no explicit license and a RAM file notes unknown terms.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://github.com/wzab/e2bus/blob/caa9dbbade06a640b931a0cbf0506d2cf88f012d/README.md
+    revision: caa9dbbade06a640b931a0cbf0506d2cf88f012d
+    accessed: '2026-09-26'
+    scope: README.md
+    details: No repository-wide license found; Ethernet source headers mention dual LGPL/BSD, but main
+      controller has no explicit license and a RAM file notes unknown terms.
+maintenance:
+  status: unknown
+  summary: Pinned snapshot inspected; recent support responsiveness and last substantive code activity
+    not established.
+  observed_head_date: '2019-10-30'
+  last_meaningful_activity: null
+  evidence:
+  - type: source_inspection
+    url: https://github.com/wzab/e2bus/commit/caa9dbbade06a640b931a0cbf0506d2cf88f012d
+    revision: caa9dbbade06a640b931a0cbf0506d2cf88f012d
+    accessed: '2026-09-26'
+    scope: HEAD metadata
+    details: Observed Git commit date; not treated as a proof of maintenance.
+documentation:
+  status: present
+  summary: README and selected implementation documentation inspected.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/wzab/e2bus/blob/caa9dbbade06a640b931a0cbf0506d2cf88f012d/README.md
+    revision: caa9dbbade06a640b931a0cbf0506d2cf88f012d
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Project introduction inspected.
+limitations: []
+evidence:
+- *id001
+verification:
+  source:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  elaboration:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_testbench:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  self_checking_testbench:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_ci:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  synthesis:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []

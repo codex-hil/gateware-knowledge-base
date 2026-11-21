@@ -1,0 +1,141 @@
+{
+  "date": "2026-09-26",
+  "note": "Hashes identify inspected core source files; no source code vendored. Project-only discoveries have their exact inspected document links in YAML.",
+  "sources": [
+    {
+      "ip": "wzab-jtag2wb-intel-altera",
+      "project": "wzab-hdl-library",
+      "revision": "a739bb79bc83da7b0ef6fd25d9033a34b0f97ace",
+      "source_path": "jtag2wb/Intel_Altera/jtag2wb.vhd",
+      "sha256": "8c41bb8753e40f6e4dd34ae7bc0bd17cc124f55d35b85bb27cd54b3325fd64e3",
+      "catalogue_path": "catalog/debug/wzab-jtag2wb-intel-altera.yaml",
+      "inspection": "Source review only; no execution"
+    },
+    {
+      "ip": "wzab-jtag2wb-xilinx",
+      "project": "wzab-hdl-library",
+      "revision": "a739bb79bc83da7b0ef6fd25d9033a34b0f97ace",
+      "source_path": "jtag2wb/Xilinx/jtag2wb.vhd",
+      "sha256": "db57565714e967ffca523f39d329f0c4847a540e4b2fb30c4ee69a67831375b7",
+      "catalogue_path": "catalog/debug/wzab-jtag2wb-xilinx.yaml",
+      "inspection": "Source review only; no execution"
+    },
+    {
+      "ip": "wzab-vzmq",
+      "project": "wzab-hdl-library",
+      "revision": "a739bb79bc83da7b0ef6fd25d9033a34b0f97ace",
+      "source_path": "vzmq/ghdl/vzmq.vhd",
+      "sha256": "aae43b2a9affc3f63d06eeb5704678c76c5ad638d3e3f3f27bd1875c37908065",
+      "catalogue_path": "catalog/debug/wzab-vzmq.yaml",
+      "inspection": "Source review only; no execution"
+    },
+    {
+      "ip": "wzab-fifo-to-udp",
+      "project": "wzab-hdl-library",
+      "revision": "a739bb79bc83da7b0ef6fd25d9033a34b0f97ace",
+      "source_path": "fifo_to_udp/src/fifo_to_udp.vhd",
+      "sha256": "b7e066f0a42d348367a42cb3aecce13c86ee1ccbd7d3ed111c637094427a3a28",
+      "catalogue_path": "catalog/ethernet/wzab-fifo-to-udp.yaml",
+      "inspection": "Source review only; no execution"
+    },
+    {
+      "ip": "e2bus-controller",
+      "project": "e2bus",
+      "revision": "caa9dbbade06a640b931a0cbf0506d2cf88f012d",
+      "source_path": "fpga/src/e2bus.vhd",
+      "sha256": "cee1c8e76526eeab9821135c3d0bf1ce8de11cfc2d90b9f7b03949043ce406cf",
+      "catalogue_path": "catalog/ethernet/e2bus-controller.yaml",
+      "inspection": "Source review only; no execution"
+    },
+    {
+      "ip": "agwb-wishbone-cdc",
+      "project": "agwb",
+      "revision": "fc805536cb7d7ab95b5768778e990c997bd0f210",
+      "source_path": "hdl/wb_cdc/wb_cdc.vhd",
+      "sha256": "49912d505a225bfd7c0852e762a47b71145787465b03761415c23164812e0d69",
+      "catalogue_path": "catalog/cdc/agwb-wishbone-cdc.yaml",
+      "inspection": "Source review only; no execution"
+    },
+    {
+      "ip": "wzab-iir-mstep",
+      "project": "wzab-hdl-library",
+      "revision": "a739bb79bc83da7b0ef6fd25d9033a34b0f97ace",
+      "source_path": "iir_filter_generator_v1/src/iir_fphdl_mstep.vhd",
+      "sha256": "92945d6ca865abdb2cd76a9de654c1a1787ecc11f62bc4a72f2bcec7fa2ba643",
+      "catalogue_path": "catalog/dsp/wzab-iir-mstep.yaml",
+      "inspection": "Source review only; no execution"
+    },
+    {
+      "ip": "opencores-cordic",
+      "project": "opencores-verilog-cordic-core",
+      "revision": "svn:6",
+      "source_path": "cordic.v",
+      "sha256": "cac2938ca7774fc64239f9c1d6e7d36aab39717f2302b4cd81857c27faa3afbf",
+      "catalogue_path": "catalog/dsp/opencores-cordic.yaml",
+      "inspection": "Source review only; no execution"
+    },
+    {
+      "ip": "wzab-iir-sstep",
+      "project": "wzab-hdl-library",
+      "revision": "a739bb79bc83da7b0ef6fd25d9033a34b0f97ace",
+      "source_path": "iir_filter_generator_v1/src/iir_fphdl_sstep.vhd",
+      "sha256": "ab2788d325e539ebca6de941885bface2bbc64f036bc3e0558117bbefed95f4a",
+      "catalogue_path": "catalog/dsp/wzab-iir-sstep.yaml",
+      "inspection": "Source review only; no execution"
+    },
+    {
+      "ip": "wzab-lfsr-hs",
+      "project": "wzab-hdl-library",
+      "revision": "a739bb79bc83da7b0ef6fd25d9033a34b0f97ace",
+      "source_path": "genlfsr_hs/src/genlfsr.vhd",
+      "sha256": "564c72b88ee57d412f8045eb56c8b34b8392646a0bdc209e6ffa86500bb77737",
+      "catalogue_path": "catalog/misc/wzab-lfsr-hs.yaml",
+      "inspection": "Source review only; no execution"
+    },
+    {
+      "ip": "wzab-axil2wb",
+      "project": "vextproj",
+      "revision": "34015a4dd110a37212a8e88f5a74e5555126ef9c",
+      "source_path": "version_2/demo_wb/hdl/src/bridge/axil2wb.vhd",
+      "sha256": "be265c8e61c44e3baa161182fd9d162e4b1161708cec2d2c794fd38f382faf68",
+      "catalogue_path": "catalog/bus/wzab-axil2wb.yaml",
+      "inspection": "Source review only; no execution"
+    },
+    {
+      "ip": "wzab-benes-concentrator",
+      "project": "concentrator",
+      "revision": "7623d2bca3db04847052755649f07f81a56b968b",
+      "source_path": "hdl/benes_concentrator.vhd",
+      "sha256": "1bf6d9cfaddd35a54d7a8918fe5ee650b035e6ed6e087950908778f3c337a8b1",
+      "catalogue_path": "catalog/bus/wzab-benes-concentrator.yaml",
+      "inspection": "Source review only; no execution"
+    },
+    {
+      "ip": "agwb-generator",
+      "project": "agwb",
+      "revision": "fc805536cb7d7ab95b5768778e990c997bd0f210",
+      "source_path": "src/addr_gen_wb.py",
+      "sha256": "b66752aca6f00b70ef58dd1c8f1950c2be4a54971089e7b0765b088c809381f6",
+      "catalogue_path": "catalog/bus/agwb-generator.yaml",
+      "inspection": "Source review only; no execution"
+    },
+    {
+      "ip": "wzab-xconcentrator",
+      "project": "xconcentrator",
+      "revision": "e740ca6f0818e9919e74fe0c5cc3349224ef6c06",
+      "source_path": "src/bnet_concentrator.vhd",
+      "sha256": "6315b85f925e26b78577a2828ccb1f8f963161f187c9b7aa388939aff4fcc79d",
+      "catalogue_path": "catalog/bus/wzab-xconcentrator.yaml",
+      "inspection": "Source review only; no execution"
+    },
+    {
+      "ip": "opencores-i2c-master",
+      "project": "opencores-i2c",
+      "revision": "svn:76",
+      "source_path": "rtl/verilog/i2c_master_top.v",
+      "sha256": "25e1f2d83aa7747378c9e20c45f0425293891fb974b33275d4934b9ae5221a87",
+      "catalogue_path": "catalog/i2c/opencores-i2c-master.yaml",
+      "inspection": "Source review only; no execution"
+    }
+  ]
+}

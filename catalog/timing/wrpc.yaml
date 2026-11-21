@@ -1,0 +1,138 @@
+schema_version: 1
+kind: ip
+id: wrpc
+name: wrpc
+project: wr-cores
+upstream_path: modules/wrc_core/wr_core.vhd
+summary: White Rabbit PTP core integrating timing, endpoint and CPU infrastructure.
+category: timing
+tags:
+- White Rabbit
+- WRPC
+- PTP
+- timing
+language:
+- VHDL
+license:
+  expression: CERN-OHL-W-2.0+
+  scope: Selected source file; dependencies and generated outputs may differ.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://gitlab.com/ohwr/project/wr-cores/-/blob/675861bb8525c3671a094364dda8f52b57f84be4/modules/wrc_core/wr_core.vhd
+    revision: 675861bb8525c3671a094364dda8f52b57f84be4
+    accessed: '2026-09-26'
+    scope: modules/wrc_core/wr_core.vhd
+    details: Inspected source API, imports/dependencies and implementation structure; not executed.
+interfaces:
+- clock/timestamp
+fpga_families: []
+toolchains: []
+reuse_scope: system
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source-level API and integration reviewed; completeness for a specific application remains
+    unqualified.
+  evidence:
+  - *id001
+documentation:
+  status: present
+  summary: Source API and repository documentation available; inspect linked parameters and dependencies
+    before reuse.
+  evidence:
+  - type: source_inspection
+    url: https://gitlab.com/ohwr/project/wr-cores/-/blob/675861bb8525c3671a094364dda8f52b57f84be4/README.md
+    revision: 675861bb8525c3671a094364dda8f52b57f84be4
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Documentation/source API reviewed; no numerical quality score assigned.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_testbench:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  self_checking_testbench:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_ci:
+    status: present
+    summary: CI configuration exists; job success and per-block coverage not established.
+    evidence:
+    - type: source_inspection
+      url: https://gitlab.com/ohwr/project/wr-cores/-/blob/675861bb8525c3671a094364dda8f52b57f84be4/.gitlab-ci.yml
+      revision: 675861bb8525c3671a094364dda8f52b57f84be4
+      accessed: '2026-09-26'
+      scope: project CI configuration, not a per-core result
+      details: Workflow/configuration inspected. Presence does not mean a successful CI run.
+  synthesis:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+verification_frameworks: []
+limitations:
+- kind: architecture
+  summary: Needs wrpc-sw, dependent cores, supported PHY and board calibration; HDL alone does not deliver
+    timing accuracy.
+  evidence:
+  - type: our_review
+    url: https://gitlab.com/ohwr/project/wr-cores/-/blob/675861bb8525c3671a094364dda8f52b57f84be4/modules/wrc_core/wr_core.vhd
+    revision: 675861bb8525c3671a094364dda8f52b57f84be4
+    accessed: '2026-09-26'
+    scope: modules/wrc_core/wr_core.vhd
+    details: Engineering interpretation from the cited source; application fit requires review.
+our_usage: []
+rejected_for: []
+selection:
+  status: reference_only
+  reason: Integration/architecture reference; constraints require review before reuse.
+  evidence:
+  - type: our_review
+    url: https://gitlab.com/ohwr/project/wr-cores/-/blob/675861bb8525c3671a094364dda8f52b57f84be4/modules/wrc_core/wr_core.vhd
+    revision: 675861bb8525c3671a094364dda8f52b57f84be4
+    accessed: '2026-09-26'
+    scope: modules/wrc_core/wr_core.vhd
+    details: Integration/architecture reference; constraints require review before reuse.
+reviewed_at: '2026-09-26'

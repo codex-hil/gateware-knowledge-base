@@ -1,0 +1,107 @@
+schema_version: 1
+kind: project
+id: xconcentrator
+name: xconcentrator
+repository: https://gitlab.com/WZabISE/xconcentrator
+aliases: []
+organization: Wojciech M. Zabołotny and contributors; see source-level credits
+revision: e740ca6f0818e9919e74fe0c5cc3349224ef6c06
+inspected_at: '2026-09-26'
+inspection_scope: Selected source files, source notices, test harnesses and documentation inspected; no
+  HDL run or build.
+license:
+  expression: LicenseRef-Dual-GPL-BSD-unspecified
+  scope: Source says Dual GPL/BSD without establishing precise versions/clauses; based partly on Marek
+    Gumiński code.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://gitlab.com/WZabISE/xconcentrator/-/blob/e740ca6f0818e9919e74fe0c5cc3349224ef6c06/src/bnet_concentrator.vhd
+    revision: e740ca6f0818e9919e74fe0c5cc3349224ef6c06
+    accessed: '2026-09-26'
+    scope: src/bnet_concentrator.vhd
+    details: Source says Dual GPL/BSD without establishing precise versions/clauses; based partly on Marek
+      Gumiński code.
+maintenance:
+  status: unknown
+  summary: Pinned snapshot inspected; recent support responsiveness and last substantive code activity
+    not established.
+  observed_head_date: '2026-02-20'
+  last_meaningful_activity: null
+  evidence:
+  - type: source_inspection
+    url: https://gitlab.com/WZabISE/xconcentrator/-/commit/e740ca6f0818e9919e74fe0c5cc3349224ef6c06
+    revision: e740ca6f0818e9919e74fe0c5cc3349224ef6c06
+    accessed: '2026-09-26'
+    scope: HEAD metadata
+    details: Observed Git commit date; not treated as a proof of maintenance.
+documentation:
+  status: present
+  summary: README and selected implementation documentation inspected.
+  evidence:
+  - type: source_inspection
+    url: https://gitlab.com/WZabISE/xconcentrator/-/blob/e740ca6f0818e9919e74fe0c5cc3349224ef6c06/README.md
+    revision: e740ca6f0818e9919e74fe0c5cc3349224ef6c06
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Project introduction inspected.
+limitations: []
+evidence:
+- *id001
+verification:
+  source:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  elaboration:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_testbench:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  self_checking_testbench:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_ci:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  synthesis:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []

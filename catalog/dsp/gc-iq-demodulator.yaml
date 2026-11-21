@@ -1,0 +1,137 @@
+schema_version: 1
+kind: ip
+id: gc-iq-demodulator
+name: gc-iq-demodulator
+project: general-cores
+upstream_path: modules/dsp/gc_iq_demodulator.vhd
+summary: IQ demodulator from OHWR general cores.
+category: dsp
+tags:
+- IQ demodulator
+- DDC
+- lockin
+language:
+- VHDL
+license:
+  expression: CERN-OHL-W-2.0+
+  scope: Selected source file; dependencies and generated outputs may differ.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://gitlab.com/ohwr/project/general-cores/-/blob/349b74a39a6aa37cf1112703fce89a9cc7682ddf/modules/dsp/gc_iq_demodulator.vhd
+    revision: 349b74a39a6aa37cf1112703fce89a9cc7682ddf
+    accessed: '2026-09-26'
+    scope: modules/dsp/gc_iq_demodulator.vhd
+    details: Inspected source API, imports/dependencies and implementation structure; not executed.
+interfaces:
+- fixed-point samples
+fpga_families: []
+toolchains: []
+reuse_scope: general
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source-level API and integration reviewed; completeness for a specific application remains
+    unqualified.
+  evidence:
+  - *id001
+documentation:
+  status: present
+  summary: Source API and repository documentation available; inspect linked parameters and dependencies
+    before reuse.
+  evidence:
+  - type: source_inspection
+    url: https://gitlab.com/ohwr/project/general-cores/-/blob/349b74a39a6aa37cf1112703fce89a9cc7682ddf/README.md
+    revision: 349b74a39a6aa37cf1112703fce89a9cc7682ddf
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Documentation/source API reviewed; no numerical quality score assigned.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_testbench:
+    status: present
+    summary: A matching upstream testbench exists; coverage is limited to its configurations.
+    evidence:
+    - &id002
+      type: source_inspection
+      url: https://gitlab.com/ohwr/project/general-cores/-/blob/349b74a39a6aa37cf1112703fce89a9cc7682ddf/testbench/dsp/gc_iq_demodulator/gc_iq_demodulator_tb.vhd
+      revision: 349b74a39a6aa37cf1112703fce89a9cc7682ddf
+      accessed: '2026-09-26'
+      scope: testbench/dsp/gc_iq_demodulator/gc_iq_demodulator_tb.vhd
+      details: Inspected testbench source; no simulation result collected.
+  self_checking_testbench:
+    status: present
+    summary: Assertions or result comparisons found in this testbench; not a pass result.
+    evidence:
+    - *id002
+  simulation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_ci:
+    status: present
+    summary: CI configuration exists; job success and per-block coverage not established.
+    evidence:
+    - type: source_inspection
+      url: https://gitlab.com/ohwr/project/general-cores/-/blob/349b74a39a6aa37cf1112703fce89a9cc7682ddf/.gitlab-ci.yml
+      revision: 349b74a39a6aa37cf1112703fce89a9cc7682ddf
+      accessed: '2026-09-26'
+      scope: project CI configuration, not a per-core result
+      details: Workflow/configuration inspected. Presence does not mean a successful CI run.
+  synthesis:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+verification_frameworks: []
+limitations: []
+our_usage: []
+rejected_for: []
+selection:
+  status: candidate
+  reason: Candidate for requirements-specific evaluation; no MODULIQ/AI-HIL adoption or validation is
+    claimed.
+  evidence:
+  - type: our_review
+    url: https://gitlab.com/ohwr/project/general-cores/-/blob/349b74a39a6aa37cf1112703fce89a9cc7682ddf/modules/dsp/gc_iq_demodulator.vhd
+    revision: 349b74a39a6aa37cf1112703fce89a9cc7682ddf
+    accessed: '2026-09-26'
+    scope: modules/dsp/gc_iq_demodulator.vhd
+    details: Candidate for requirements-specific evaluation; no MODULIQ/AI-HIL adoption or validation
+      is claimed.
+reviewed_at: '2026-09-26'

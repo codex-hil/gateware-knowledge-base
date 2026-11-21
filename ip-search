@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+set -eu
+KB_ROOT=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+exec python3 "$KB_ROOT/scripts/kb.py" search "$@"

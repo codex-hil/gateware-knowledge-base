@@ -1,0 +1,185 @@
+schema_version: 1
+kind: ip
+id: singularitysurfer-chain
+name: singularitysurfer-chain
+project: singularitysurfer
+upstream_path: FPGA/HDL/SingularitySurfer/TOP_V1.v
+summary: Integrated FPGA lock-in signal chain.
+category: lockin
+tags:
+- FPGA lock-in amplifier
+- digital lock-in
+- IQ demodulator
+- lockin
+language:
+- Verilog
+license:
+  expression: MIT
+  scope: Selected source file; dependencies and generated outputs may differ.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier/blob/9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0/LICENSE
+    revision: 9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+    accessed: '2026-09-26'
+    scope: LICENSE
+    details: Repository notice used where selected file lacks explicit terms; dependency licenses require
+      separate review.
+interfaces:
+- IQ samples
+fpga_families:
+- name: iCE40UP5K
+  status: claimed
+  scope: Target platform described upstream.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier/blob/9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0/README.md
+    revision: 9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Target platform described upstream.
+toolchains:
+- name: yosys-nextpnr
+  status: integration_present
+  scope: Build recipe exists for top-level design; not an isolated-core synthesis result.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier/blob/9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0/FPGA/HDL/SingularitySurfer/Makefile
+    revision: 9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+    accessed: '2026-09-26'
+    scope: FPGA/HDL/SingularitySurfer/Makefile
+    details: Build recipe exists for top-level design; not an isolated-core synthesis result.
+reuse_scope: platform
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source-level API and integration reviewed; completeness for a specific application remains
+    unqualified.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier/blob/9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0/FPGA/HDL/SingularitySurfer/TOP_V1.v
+    revision: 9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+    accessed: '2026-09-26'
+    scope: FPGA/HDL/SingularitySurfer/TOP_V1.v
+    details: Inspected source API, imports/dependencies and implementation structure; not executed.
+documentation:
+  status: present
+  summary: Source API and repository documentation available; inspect linked parameters and dependencies
+    before reuse.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier/blob/9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0/README.md
+    revision: 9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Documentation/source API reviewed; no numerical quality score assigned.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_testbench:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  self_checking_testbench:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_ci:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  synthesis:
+    status: present
+    summary: Upstream committed a build artifact. Correspondence to this source revision and successful
+      timing closure are not independently established.
+    evidence:
+    - type: upstream_artifact
+      url: https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier/blob/9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0/FPGA/HDL/SingularitySurfer/yosyslog.log
+      revision: 9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+      accessed: '2026-09-26'
+      scope: integrated TOP_V1 design; exact build provenance unknown
+      details: Artifact present in pinned tree; not rebuilt or independently verified.
+  place_and_route:
+    status: present
+    summary: Upstream committed a build artifact. Correspondence to this source revision and successful
+      timing closure are not independently established.
+    evidence:
+    - type: upstream_artifact
+      url: https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier/blob/9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0/FPGA/HDL/SingularitySurfer/pnrout.asc
+      revision: 9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+      accessed: '2026-09-26'
+      scope: integrated TOP_V1 design; exact build provenance unknown
+      details: Artifact present in pinned tree; not rebuilt or independently verified.
+  bitstream:
+    status: present
+    summary: Upstream committed a build artifact. Correspondence to this source revision and successful
+      timing closure are not independently established.
+    evidence:
+    - type: upstream_artifact
+      url: https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier/blob/9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0/FPGA/HDL/SingularitySurfer/synth.bin
+      revision: 9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+      accessed: '2026-09-26'
+      scope: integrated TOP_V1 design; exact build provenance unknown
+      details: Artifact present in pinned tree; not rebuilt or independently verified.
+  hardware_smoke:
+    status: claimed
+    summary: Upstream reports a physical lock-in demonstration; no independent reproduction.
+    evidence:
+    - type: upstream_claim
+      url: https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier/blob/9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0/README.md
+      revision: 9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+      accessed: '2026-09-26'
+      scope: complete instrument, not extracted cores
+      details: Author presents a speaker measurement demonstration.
+  functional_hil:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+verification_frameworks: []
+limitations:
+- kind: architecture
+  summary: Learning/reference design; iCE40-specific integration and numerical limits need revalidation
+    before extraction.
+  evidence:
+  - type: our_review
+    url: https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier/blob/9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0/FPGA/HDL/SingularitySurfer/TOP_V1.v
+    revision: 9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+    accessed: '2026-09-26'
+    scope: FPGA/HDL/SingularitySurfer/TOP_V1.v
+    details: Engineering interpretation from the cited source; application fit requires review.
+our_usage: []
+rejected_for: []
+selection:
+  status: reference_only
+  reason: Integration/architecture reference; constraints require review before reuse.
+  evidence:
+  - type: our_review
+    url: https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier/blob/9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0/FPGA/HDL/SingularitySurfer/TOP_V1.v
+    revision: 9f7be5b3397ab9c71a1b2c4c0d3f37ebbfccb4a0
+    accessed: '2026-09-26'
+    scope: FPGA/HDL/SingularitySurfer/TOP_V1.v
+    details: Integration/architecture reference; constraints require review before reuse.
+reviewed_at: '2026-09-26'

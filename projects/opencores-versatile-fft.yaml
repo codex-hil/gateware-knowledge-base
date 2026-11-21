@@ -1,0 +1,116 @@
+schema_version: 1
+kind: project
+id: opencores-versatile-fft
+name: OpenCores versatile_fft
+repository: https://opencores.org/ocsvn/versatile_fft/versatile_fft/trunk
+aliases:
+- https://opencores.org/projects/versatile_fft
+organization: Wojciech M. Zabołotny
+vcs: svn
+revision: svn:3
+inspected_at: '2026-09-26'
+inspection_scope: Octave FFT reference-generation and manual-comparison recipe inspected; implementation
+  retrieval status recorded below.
+license:
+  expression: LicenseRef-OpenCores-component-unresolved
+  scope: Only selected files/notices reviewed; no blanket dependency license inferred.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://opencores.org/ocsvn/versatile_fft/!svn/bc/3/versatile_fft/trunk/single_unit/test_fft.m
+    revision: svn:3
+    accessed: '2026-09-26'
+    scope: single_unit/test_fft.m
+    details: Octave FFT reference-generation and manual-comparison recipe inspected; implementation retrieval
+      status recorded below.
+maintenance:
+  status: unknown
+  summary: Native SVN snapshot pinned; support responsiveness and last meaningful activity not established.
+  observed_head_date: null
+  last_meaningful_activity: null
+  evidence:
+  - *id001
+documentation:
+  status: present
+  summary: Selected source comments or project documentation inspected.
+  evidence:
+  - *id001
+limitations:
+- kind: verification_gap
+  summary: OpenCores served intermittent HTTP 500/timeouts during review. Missing fetches are not evidence
+    of absent files or abandoned development.
+  evidence:
+  - *id001
+- kind: verification_gap
+  summary: Octave produces reference FFT output and invokes vim diff for manual comparison; no automated
+    pass/fail numerical verdict.
+  evidence:
+  - &id002
+    type: source_inspection
+    url: https://opencores.org/ocsvn/versatile_fft/!svn/bc/3/versatile_fft/trunk/single_unit/test_fft.m
+    revision: svn:3
+    accessed: '2026-09-26'
+    scope: single_unit/test_fft.m
+    details: Octave produces reference FFT output and invokes vim diff for manual comparison; no automated
+      pass/fail numerical verdict.
+evidence:
+- *id001
+verification:
+  source:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  elaboration:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_testbench:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  self_checking_testbench:
+    status: partial
+    summary: Octave produces reference FFT output and invokes vim diff for manual comparison; no automated
+      pass/fail numerical verdict.
+    evidence:
+    - *id002
+  simulation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_ci:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  synthesis:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []

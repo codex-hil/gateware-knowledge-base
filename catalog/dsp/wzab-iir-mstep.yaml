@@ -1,0 +1,182 @@
+schema_version: 1
+kind: ip
+id: wzab-iir-mstep
+name: WZab IIR multistep
+project: wzab-hdl-library
+upstream_path: iir_filter_generator_v1/src/iir_fphdl_mstep.vhd
+summary: Behavioral fixed-point IIR sharing arithmetic over a configured number of clock cycles.
+category: dsp
+tags:
+- wzab
+- Zabolotny
+- IIR
+- filter
+- DSP
+language:
+- VHDL
+license:
+  expression: CC0-1.0
+  scope: Selected component notice; dependency and generator/output licenses must be considered separately.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/wzab/wzab-hdl-library/blob/a739bb79bc83da7b0ef6fd25d9033a34b0f97ace/iir_filter_generator_v1/README.md
+    revision: a739bb79bc83da7b0ef6fd25d9033a34b0f97ace
+    accessed: '2026-09-26'
+    scope: iir_filter_generator_v1/README.md
+    details: Selected source or component-specific licensing notice inspected.
+interfaces:
+- fixed-point samples
+fpga_families: []
+toolchains:
+- name: GHDL
+  status: integration_present
+  scope: Octave/GHDL comparison recipe; not executed.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/wzab/wzab-hdl-library/blob/a739bb79bc83da7b0ef6fd25d9033a34b0f97ace/iir_filter_generator_v1/src/filter_test.m
+    revision: a739bb79bc83da7b0ef6fd25d9033a34b0f97ace
+    accessed: '2026-09-26'
+    scope: iir_filter_generator_v1/src/filter_test.m
+    details: Octave/GHDL comparison recipe; not executed.
+reuse_scope: general
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source implementation inspected; target-specific qualification remains necessary.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://github.com/wzab/wzab-hdl-library/blob/a739bb79bc83da7b0ef6fd25d9033a34b0f97ace/iir_filter_generator_v1/src/iir_fphdl_mstep.vhd
+    revision: a739bb79bc83da7b0ef6fd25d9033a34b0f97ace
+    accessed: '2026-09-26'
+    scope: iir_filter_generator_v1/src/iir_fphdl_mstep.vhd
+    details: Inspected entity/API, source comments, dependencies and implementation. No execution.
+documentation:
+  status: present
+  summary: Component documentation/API describes integration constraints.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/wzab/wzab-hdl-library/blob/a739bb79bc83da7b0ef6fd25d9033a34b0f97ace/iir_filter_generator_v1/README.md
+    revision: a739bb79bc83da7b0ef6fd25d9033a34b0f97ace
+    accessed: '2026-09-26'
+    scope: iir_filter_generator_v1/README.md
+    details: Component-level documentation inspected.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_testbench:
+    status: present
+    summary: Matching testbench source inspected; no run collected.
+    evidence:
+    - type: source_inspection
+      url: https://github.com/wzab/wzab-hdl-library/blob/a739bb79bc83da7b0ef6fd25d9033a34b0f97ace/iir_filter_generator_v1/src/iir_tb_mstep.vhd
+      revision: a739bb79bc83da7b0ef6fd25d9033a34b0f97ace
+      accessed: '2026-09-26'
+      scope: iir_filter_generator_v1/src/iir_tb_mstep.vhd
+      details: Testbench exists; presence is not a pass.
+  self_checking_testbench:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_ci:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  synthesis:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+verification_frameworks:
+- GHDL
+limitations:
+- kind: toolchain
+  summary: Depends on fixed-point packages and generated coefficients; legacy README setup and current
+    imports must be reconciled.
+  evidence:
+  - type: our_review
+    url: https://github.com/wzab/wzab-hdl-library/blob/a739bb79bc83da7b0ef6fd25d9033a34b0f97ace/iir_filter_generator_v1/README.md
+    revision: a739bb79bc83da7b0ef6fd25d9033a34b0f97ace
+    accessed: '2026-09-26'
+    scope: iir_filter_generator_v1/README.md
+    details: Depends on fixed-point packages and generated coefficients; legacy README setup and current
+      imports must be reconciled.
+- kind: verification_gap
+  summary: Octave test script opens output files in vim for manual comparison; this is not an automated
+    numerical pass/fail regression.
+  evidence:
+  - type: our_review
+    url: https://github.com/wzab/wzab-hdl-library/blob/a739bb79bc83da7b0ef6fd25d9033a34b0f97ace/iir_filter_generator_v1/src/filter_test.m
+    revision: a739bb79bc83da7b0ef6fd25d9033a34b0f97ace
+    accessed: '2026-09-26'
+    scope: iir_filter_generator_v1/src/filter_test.m
+    details: Octave test script opens output files in vim for manual comparison; this is not an automated
+      numerical pass/fail regression.
+- kind: license
+  summary: The component documentation excludes the GPL fmod.vhd dependency from its public-domain/CC0
+    declaration.
+  evidence:
+  - type: our_review
+    url: https://github.com/wzab/wzab-hdl-library/blob/a739bb79bc83da7b0ef6fd25d9033a34b0f97ace/iir_filter_generator_v1/README.md
+    revision: a739bb79bc83da7b0ef6fd25d9033a34b0f97ace
+    accessed: '2026-09-26'
+    scope: iir_filter_generator_v1/README.md
+    details: The component documentation excludes the GPL fmod.vhd dependency from its public-domain/CC0
+      declaration.
+- kind: resources
+  summary: Single-step form has high resource demand; multistep form trades throughput/latency for arithmetic
+    sharing.
+  evidence:
+  - type: our_review
+    url: https://github.com/wzab/wzab-hdl-library/blob/a739bb79bc83da7b0ef6fd25d9033a34b0f97ace/iir_filter_generator_v1/README.md
+    revision: a739bb79bc83da7b0ef6fd25d9033a34b0f97ace
+    accessed: '2026-09-26'
+    scope: iir_filter_generator_v1/README.md
+    details: Single-step form has high resource demand; multistep form trades throughput/latency for arithmetic
+      sharing.
+our_usage: []
+rejected_for: []
+selection:
+  status: candidate
+  reason: Candidate for requirements-specific evaluation; no local adoption or test result claimed.
+  evidence:
+  - *id001
+reviewed_at: '2026-09-26'

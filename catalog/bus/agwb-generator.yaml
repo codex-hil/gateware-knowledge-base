@@ -1,0 +1,152 @@
+schema_version: 1
+kind: ip
+id: agwb-generator
+name: AGWB register-map generator
+project: agwb
+upstream_path: src/addr_gen_wb.py
+summary: Generate VHDL register decoding and software access descriptions for hierarchical Wishbone systems.
+category: bus
+tags:
+- wzab
+- Zabolotny
+- register map
+- CSR
+- code generator
+language:
+- Python
+- VHDL (generated)
+license:
+  expression: LicenseRef-AGWB-GPL-LGPL-notices
+  scope: Selected component notice; dependency and generator/output licenses must be considered separately.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/wzab/agwb/blob/fc805536cb7d7ab95b5768778e990c997bd0f210/README.md
+    revision: fc805536cb7d7ab95b5768778e990c997bd0f210
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Selected source or component-specific licensing notice inspected.
+interfaces:
+- Wishbone
+- XML register description
+- VHDL output
+fpga_families: []
+toolchains:
+- name: GHDL
+  status: integration_present
+  scope: Documented demonstration simulation; no run reproduced.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/wzab/agwb/blob/fc805536cb7d7ab95b5768778e990c997bd0f210/README.md
+    revision: fc805536cb7d7ab95b5768778e990c997bd0f210
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Documented demonstration simulation; no run reproduced.
+reuse_scope: ecosystem
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source implementation inspected; target-specific qualification remains necessary.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://github.com/wzab/agwb/blob/fc805536cb7d7ab95b5768778e990c997bd0f210/src/addr_gen_wb.py
+    revision: fc805536cb7d7ab95b5768778e990c997bd0f210
+    accessed: '2026-09-26'
+    scope: src/addr_gen_wb.py
+    details: Inspected entity/API, source comments, dependencies and implementation. No execution.
+documentation:
+  status: present
+  summary: Component documentation/API describes integration constraints.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/wzab/agwb/blob/fc805536cb7d7ab95b5768778e990c997bd0f210/README.md
+    revision: fc805536cb7d7ab95b5768778e990c997bd0f210
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Component-level documentation inspected.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_testbench:
+    status: present
+    summary: Matching testbench source inspected; no run collected.
+    evidence:
+    - type: source_inspection
+      url: https://github.com/wzab/agwb/blob/fc805536cb7d7ab95b5768778e990c997bd0f210/tests/test/hdl/wb_test_top_tb.vhd
+      revision: fc805536cb7d7ab95b5768778e990c997bd0f210
+      accessed: '2026-09-26'
+      scope: tests/test/hdl/wb_test_top_tb.vhd
+      details: Testbench exists; presence is not a pass.
+  self_checking_testbench:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_ci:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  synthesis:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+verification_frameworks:
+- GHDL
+limitations:
+- kind: license
+  summary: README says GPL v2 while generator header says LGPL V2; generated outputs and external general-cores
+    licensing are separate.
+  evidence:
+  - type: our_review
+    url: https://github.com/wzab/agwb/blob/fc805536cb7d7ab95b5768778e990c997bd0f210/src/addr_gen_wb.py
+    revision: fc805536cb7d7ab95b5768778e990c997bd0f210
+    accessed: '2026-09-26'
+    scope: src/addr_gen_wb.py
+    details: README says GPL v2 while generator header says LGPL V2; generated outputs and external general-cores
+      licensing are separate.
+our_usage: []
+rejected_for: []
+selection:
+  status: candidate
+  reason: Candidate for requirements-specific evaluation; no local adoption or test result claimed.
+  evidence:
+  - *id001
+reviewed_at: '2026-09-26'

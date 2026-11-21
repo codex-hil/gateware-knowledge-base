@@ -1,0 +1,150 @@
+schema_version: 1
+kind: ip
+id: litejesd204-link-c
+name: litejesd204-link-c
+project: litejesd204b
+upstream_path: litejesd204/link_204c.py
+summary: JESD204C link layer using 64b/66b.
+category: adc-dac
+tags:
+- JESD204
+- JESD204C
+- 64b66b
+- 64b/66b
+language:
+- Python/Migen
+license:
+  expression: BSD-2-Clause
+  scope: Selected source file; dependencies and generated outputs may differ.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://github.com/enjoy-digital/litejesd204/blob/a1d0cbf27f5e386bfcad2190c82677024fc949bd/litejesd204/link_204c.py
+    revision: a1d0cbf27f5e386bfcad2190c82677024fc949bd
+    accessed: '2026-09-26'
+    scope: litejesd204/link_204c.py
+    details: Inspected source API, imports/dependencies and implementation structure; not executed.
+interfaces:
+- converter data/link
+- JESD204C
+fpga_families: []
+toolchains: []
+reuse_scope: ecosystem
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source-level API and integration reviewed; completeness for a specific application remains
+    unqualified.
+  evidence:
+  - *id001
+documentation:
+  status: present
+  summary: Source API and repository documentation available; inspect linked parameters and dependencies
+    before reuse.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/enjoy-digital/litejesd204/blob/a1d0cbf27f5e386bfcad2190c82677024fc949bd/README.md
+    revision: a1d0cbf27f5e386bfcad2190c82677024fc949bd
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Documentation/source API reviewed; no numerical quality score assigned.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_testbench:
+    status: present
+    summary: A matching upstream testbench exists; coverage is limited to its configurations.
+    evidence:
+    - &id002
+      type: source_inspection
+      url: https://github.com/enjoy-digital/litejesd204/blob/a1d0cbf27f5e386bfcad2190c82677024fc949bd/test/test_link_204c.py
+      revision: a1d0cbf27f5e386bfcad2190c82677024fc949bd
+      accessed: '2026-09-26'
+      scope: test/test_link_204c.py
+      details: Inspected testbench source; no simulation result collected.
+  self_checking_testbench:
+    status: present
+    summary: Assertions or result comparisons found in this testbench; not a pass result.
+    evidence:
+    - *id002
+  simulation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_ci:
+    status: present
+    summary: CI configuration exists; job success and per-block coverage not established.
+    evidence:
+    - type: source_inspection
+      url: https://github.com/enjoy-digital/litejesd204/blob/a1d0cbf27f5e386bfcad2190c82677024fc949bd/.github/workflows/ci.yml
+      revision: a1d0cbf27f5e386bfcad2190c82677024fc949bd
+      accessed: '2026-09-26'
+      scope: project CI configuration, not a per-core result
+      details: Workflow/configuration inspected. Presence does not mean a successful CI run.
+  synthesis:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+verification_frameworks:
+- Migen simulation
+limitations:
+- kind: architecture
+  summary: Inspect converter-specific link configuration and PHY support; B-layer evidence does not validate
+    C.
+  evidence:
+  - type: our_review
+    url: https://github.com/enjoy-digital/litejesd204/blob/a1d0cbf27f5e386bfcad2190c82677024fc949bd/litejesd204/link_204c.py
+    revision: a1d0cbf27f5e386bfcad2190c82677024fc949bd
+    accessed: '2026-09-26'
+    scope: litejesd204/link_204c.py
+    details: Engineering interpretation from the cited source; application fit requires review.
+our_usage: []
+rejected_for: []
+selection:
+  status: candidate
+  reason: Candidate for requirements-specific evaluation; no MODULIQ/AI-HIL adoption or validation is
+    claimed.
+  evidence:
+  - type: our_review
+    url: https://github.com/enjoy-digital/litejesd204/blob/a1d0cbf27f5e386bfcad2190c82677024fc949bd/litejesd204/link_204c.py
+    revision: a1d0cbf27f5e386bfcad2190c82677024fc949bd
+    accessed: '2026-09-26'
+    scope: litejesd204/link_204c.py
+    details: Candidate for requirements-specific evaluation; no MODULIQ/AI-HIL adoption or validation
+      is claimed.
+reviewed_at: '2026-09-26'

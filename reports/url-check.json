@@ -1,0 +1,187 @@
+{
+  "checked_at": "2026-09-26T10:08:46.423235+00:00",
+  "scope": "canonical repositories and aliases",
+  "note": "HTTP reachability is not evidence of IP quality. Access failures are inconclusive; redirects require review, never automatic rewriting.",
+  "results": [
+    {
+      "url": "https://git.m-labs.hk/M-Labs/artiq",
+      "final_url": "https://git.m-labs.hk/M-Labs/artiq",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://git.m-labs.hk/M-Labs/artiq-zynq",
+      "final_url": "https://git.m-labs.hk/M-Labs/artiq-zynq",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://git.m-labs.hk/M-Labs/misoc",
+      "final_url": "https://git.m-labs.hk/M-Labs/misoc",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/GibbleLab/FPGA",
+      "final_url": "https://github.com/GibbleLab/FPGA",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/RedPitaya/RedPitaya-FPGA",
+      "final_url": "https://github.com/RedPitaya/RedPitaya-FPGA",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/ZipCPU/cordic",
+      "final_url": "https://github.com/ZipCPU/cordic",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/ZipCPU/wb2axip",
+      "final_url": "https://github.com/ZipCPU/wb2axip",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/ahmedshahein/DSP-RTL-Lib",
+      "final_url": "https://github.com/ahmedshahein/DSP-RTL-Lib",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/alexforencich/verilog-axis",
+      "final_url": "https://github.com/alexforencich/verilog-axis",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/alexforencich/verilog-ethernet",
+      "final_url": "https://github.com/alexforencich/verilog-ethernet",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/enjoy-digital/litedram",
+      "final_url": "https://github.com/enjoy-digital/litedram",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/enjoy-digital/liteeth",
+      "final_url": "https://github.com/enjoy-digital/liteeth",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/enjoy-digital/liteiclink",
+      "final_url": "https://github.com/enjoy-digital/liteiclink",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/enjoy-digital/litejesd204",
+      "final_url": "https://github.com/enjoy-digital/litejesd204",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/enjoy-digital/litejesd204b",
+      "final_url": "https://github.com/enjoy-digital/litejesd204",
+      "http_status": 200,
+      "status": "moved"
+    },
+    {
+      "url": "https://github.com/enjoy-digital/litepcie",
+      "final_url": "https://github.com/enjoy-digital/litepcie",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/enjoy-digital/litescope",
+      "final_url": "https://github.com/enjoy-digital/litescope",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/enjoy-digital/litex",
+      "final_url": "https://github.com/enjoy-digital/litex",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/fpganinja/taxi",
+      "final_url": "https://github.com/fpganinja/taxi",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/linien-org/linien",
+      "final_url": "https://github.com/linien-org/linien",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/m-labs/artiq",
+      "final_url": "https://github.com/m-labs/artiq",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier",
+      "final_url": "https://github.com/nkrackow/SingularitySurfer-FPGA-Lock-In-Amplifier",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/pyrpl-fpga/pyrpl",
+      "final_url": "https://github.com/pyrpl-fpga/pyrpl",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/quartiq/phaser",
+      "final_url": "https://github.com/quartiq/phaser",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://gitlab.com/colibri-cern/colibri",
+      "final_url": "https://gitlab.com/colibri-cern/colibri",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://gitlab.com/ohwr/project/general-cores",
+      "final_url": "https://gitlab.com/ohwr/project/general-cores",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://gitlab.com/ohwr/project/spec",
+      "final_url": "https://gitlab.com/ohwr/project/spec",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://gitlab.com/ohwr/project/spec7",
+      "final_url": "https://gitlab.com/ohwr/project/spec7",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://gitlab.com/ohwr/project/wr-cores",
+      "final_url": "https://gitlab.com/ohwr/project/wr-cores",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "url": "https://gitlab.com/ohwr/project/wren",
+      "final_url": "https://gitlab.com/ohwr/project/wren",
+      "http_status": 200,
+      "status": "reachable"
+    }
+  ]
+}

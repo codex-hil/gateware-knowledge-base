@@ -1,0 +1,180 @@
+schema_version: 1
+kind: ip
+id: wzab-benes-concentrator
+name: Beneš-network concentrator
+project: concentrator
+upstream_path: hdl/benes_concentrator.vhd
+summary: Concentrate sparse records using a reduced Beneš switching network.
+category: bus
+tags:
+- wzab
+- Zabolotny
+- stream processing
+- concentrator
+- DAQ
+language:
+- VHDL
+license:
+  expression: LicenseRef-Dual-GPL-BSD-unspecified
+  scope: Selected component notice; dependency and generator/output licenses must be considered separately.
+  evidence:
+  - type: source_inspection
+    url: https://gitlab.com/WZabISE/concentrator/-/blob/7623d2bca3db04847052755649f07f81a56b968b/hdl/benes_concentrator.vhd
+    revision: 7623d2bca3db04847052755649f07f81a56b968b
+    accessed: '2026-09-26'
+    scope: hdl/benes_concentrator.vhd
+    details: Selected source or component-specific licensing notice inspected.
+interfaces:
+- parallel data
+- data valid
+fpga_families: []
+toolchains:
+- name: GHDL
+  status: integration_present
+  scope: Simulation recipes for several input counts.
+  evidence:
+  - type: source_inspection
+    url: https://gitlab.com/WZabISE/concentrator/-/blob/7623d2bca3db04847052755649f07f81a56b968b/README.md
+    revision: 7623d2bca3db04847052755649f07f81a56b968b
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Simulation recipes for several input counts.
+- name: Vivado
+  status: integration_present
+  scope: Vivado 2020.1 board build projects described; no build reproduced.
+  evidence:
+  - type: source_inspection
+    url: https://gitlab.com/WZabISE/concentrator/-/blob/7623d2bca3db04847052755649f07f81a56b968b/README.md
+    revision: 7623d2bca3db04847052755649f07f81a56b968b
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Vivado 2020.1 board build projects described; no build reproduced.
+reuse_scope: ecosystem
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source implementation inspected; target-specific qualification remains necessary.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://gitlab.com/WZabISE/concentrator/-/blob/7623d2bca3db04847052755649f07f81a56b968b/hdl/benes_concentrator.vhd
+    revision: 7623d2bca3db04847052755649f07f81a56b968b
+    accessed: '2026-09-26'
+    scope: hdl/benes_concentrator.vhd
+    details: Inspected entity/API, source comments, dependencies and implementation. No execution.
+documentation:
+  status: present
+  summary: Component documentation/API describes integration constraints.
+  evidence:
+  - type: source_inspection
+    url: https://gitlab.com/WZabISE/concentrator/-/blob/7623d2bca3db04847052755649f07f81a56b968b/README.md
+    revision: 7623d2bca3db04847052755649f07f81a56b968b
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Component-level documentation inspected.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_testbench:
+    status: present
+    summary: Matching testbench source inspected; no run collected.
+    evidence:
+    - type: source_inspection
+      url: https://gitlab.com/WZabISE/concentrator/-/blob/7623d2bca3db04847052755649f07f81a56b968b/hdl/benes_concentrator_tb.vhd
+      revision: 7623d2bca3db04847052755649f07f81a56b968b
+      accessed: '2026-09-26'
+      scope: hdl/benes_concentrator_tb.vhd
+      details: Testbench exists; presence is not a pass.
+  self_checking_testbench:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_ci:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  synthesis:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+verification_frameworks:
+- GHDL
+limitations:
+- kind: architecture
+  summary: README points to newer scalable xconcentrator; 9/12-input examples also require a 3/2 clock-rate
+    converter.
+  evidence:
+  - type: our_review
+    url: https://gitlab.com/WZabISE/concentrator/-/blob/7623d2bca3db04847052755649f07f81a56b968b/README.md
+    revision: 7623d2bca3db04847052755649f07f81a56b968b
+    accessed: '2026-09-26'
+    scope: README.md
+    details: README points to newer scalable xconcentrator; 9/12-input examples also require a 3/2 clock-rate
+      converter.
+- kind: architecture
+  summary: Hardware-demo output FIFO reverses each group of eight words; account for this in comparison
+    code.
+  evidence:
+  - type: our_review
+    url: https://gitlab.com/WZabISE/concentrator/-/blob/7623d2bca3db04847052755649f07f81a56b968b/README.md
+    revision: 7623d2bca3db04847052755649f07f81a56b968b
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Hardware-demo output FIFO reverses each group of eight words; account for this in comparison
+      code.
+- kind: license
+  summary: Header credits Marek Gumiński and states dual GPL/BSD without full version identification.
+  evidence:
+  - type: our_review
+    url: https://gitlab.com/WZabISE/concentrator/-/blob/7623d2bca3db04847052755649f07f81a56b968b/hdl/benes_concentrator.vhd
+    revision: 7623d2bca3db04847052755649f07f81a56b968b
+    accessed: '2026-09-26'
+    scope: hdl/benes_concentrator.vhd
+    details: Header credits Marek Gumiński and states dual GPL/BSD without full version identification.
+our_usage: []
+rejected_for: []
+selection:
+  status: reference_only
+  reason: Architecture/integration reference; resolve the recorded limitations before reuse.
+  evidence:
+  - *id001
+reviewed_at: '2026-09-26'

@@ -1,0 +1,137 @@
+schema_version: 1
+kind: ip
+id: legacy-rgmii-mac
+name: legacy-rgmii-mac
+project: verilog-ethernet
+upstream_path: rtl/eth_mac_1g_rgmii.v
+summary: Legacy MIT-licensed gigabit RGMII MAC.
+category: ethernet
+tags:
+- ethernet
+- RGMII
+- MAC
+language:
+- Verilog
+license:
+  expression: MIT
+  scope: Selected source file; dependencies and generated outputs may differ.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://github.com/alexforencich/verilog-ethernet/blob/77320a9471d19c7dd383914bc049e02d9f4f1ffb/rtl/eth_mac_1g_rgmii.v
+    revision: 77320a9471d19c7dd383914bc049e02d9f4f1ffb
+    accessed: '2026-09-26'
+    scope: rtl/eth_mac_1g_rgmii.v
+    details: Inspected source API, imports/dependencies and implementation structure; not executed.
+interfaces:
+- Ethernet packet stream
+- RGMII
+fpga_families: []
+toolchains: []
+reuse_scope: general
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source-level API and integration reviewed; completeness for a specific application remains
+    unqualified.
+  evidence:
+  - *id001
+documentation:
+  status: present
+  summary: Source API and repository documentation available; inspect linked parameters and dependencies
+    before reuse.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/alexforencich/verilog-ethernet/blob/77320a9471d19c7dd383914bc049e02d9f4f1ffb/README.md
+    revision: 77320a9471d19c7dd383914bc049e02d9f4f1ffb
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Documentation/source API reviewed; no numerical quality score assigned.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_testbench:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  self_checking_testbench:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_ci:
+    status: present
+    summary: CI configuration exists; job success and per-block coverage not established.
+    evidence:
+    - type: source_inspection
+      url: https://github.com/alexforencich/verilog-ethernet/blob/77320a9471d19c7dd383914bc049e02d9f4f1ffb/.github/workflows/regression-tests.yml
+      revision: 77320a9471d19c7dd383914bc049e02d9f4f1ffb
+      accessed: '2026-09-26'
+      scope: project CI configuration, not a per-core result
+      details: Workflow/configuration inspected. Presence does not mean a successful CI run.
+  synthesis:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+verification_frameworks: []
+limitations:
+- kind: architecture
+  summary: Upstream directs new development to Taxi; legacy implementation needs a maintenance plan.
+  evidence:
+  - type: our_review
+    url: https://github.com/alexforencich/verilog-ethernet/blob/77320a9471d19c7dd383914bc049e02d9f4f1ffb/rtl/eth_mac_1g_rgmii.v
+    revision: 77320a9471d19c7dd383914bc049e02d9f4f1ffb
+    accessed: '2026-09-26'
+    scope: rtl/eth_mac_1g_rgmii.v
+    details: Engineering interpretation from the cited source; application fit requires review.
+our_usage: []
+rejected_for: []
+selection:
+  status: reference_only
+  reason: Integration/architecture reference; constraints require review before reuse.
+  evidence:
+  - type: our_review
+    url: https://github.com/alexforencich/verilog-ethernet/blob/77320a9471d19c7dd383914bc049e02d9f4f1ffb/rtl/eth_mac_1g_rgmii.v
+    revision: 77320a9471d19c7dd383914bc049e02d9f4f1ffb
+    accessed: '2026-09-26'
+    scope: rtl/eth_mac_1g_rgmii.v
+    details: Integration/architecture reference; constraints require review before reuse.
+reviewed_at: '2026-09-26'

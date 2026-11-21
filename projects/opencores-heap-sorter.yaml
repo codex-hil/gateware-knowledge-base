@@ -1,0 +1,116 @@
+schema_version: 1
+kind: project
+id: opencores-heap-sorter
+name: OpenCores heap_sorter
+repository: https://opencores.org/ocsvn/heap_sorter/heap_sorter/trunk
+aliases:
+- https://opencores.org/projects/heap_sorter
+organization: Wojciech M. Zabołotny
+vcs: svn
+revision: svn:9
+inspected_at: '2026-09-26'
+inspection_scope: Timestamp heap sorter testbench and Python checker inspected; implementation retrieval
+  status recorded below.
+license:
+  expression: LicenseRef-BSD-unspecified
+  scope: Only selected files/notices reviewed; no blanket dependency license inferred.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://opencores.org/ocsvn/heap_sorter/!svn/bc/9/heap_sorter/trunk/standard_version/src/sorter_sys_tb.vhd
+    revision: svn:9
+    accessed: '2026-09-26'
+    scope: standard_version/src/sorter_sys_tb.vhd
+    details: Timestamp heap sorter testbench and Python checker inspected; implementation retrieval status
+      recorded below.
+maintenance:
+  status: unknown
+  summary: Native SVN snapshot pinned; support responsiveness and last meaningful activity not established.
+  observed_head_date: null
+  last_meaningful_activity: null
+  evidence:
+  - *id001
+documentation:
+  status: present
+  summary: Selected source comments or project documentation inspected.
+  evidence:
+  - *id001
+limitations:
+- kind: verification_gap
+  summary: OpenCores served intermittent HTTP 500/timeouts during review. Missing fetches are not evidence
+    of absent files or abandoned development.
+  evidence:
+  - *id001
+- kind: verification_gap
+  summary: Python checker tests timestamp ordering and record count, but not complete payload equivalence;
+    uses Python 2 print syntax.
+  evidence:
+  - &id002
+    type: source_inspection
+    url: https://opencores.org/ocsvn/heap_sorter/!svn/bc/9/heap_sorter/trunk/standard_version/sort_test_check.py
+    revision: svn:9
+    accessed: '2026-09-26'
+    scope: standard_version/sort_test_check.py
+    details: Python checker tests timestamp ordering and record count, but not complete payload equivalence;
+      uses Python 2 print syntax.
+evidence:
+- *id001
+verification:
+  source:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  elaboration:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_testbench:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  self_checking_testbench:
+    status: present
+    summary: Python checker tests timestamp ordering and record count, but not complete payload equivalence;
+      uses Python 2 print syntax.
+    evidence:
+    - *id002
+  simulation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  upstream_ci:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  synthesis:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this source review.
+    evidence: []

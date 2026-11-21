@@ -1,0 +1,135 @@
+schema_version: 1
+kind: ip
+id: redpitaya-decimator
+name: redpitaya-decimator
+project: redpitaya
+upstream_path: rtl/rtl/scope_dec_avg.sv
+summary: Oscilloscope averaging/decimation stage.
+category: dsp
+tags:
+- decimation
+- acquisition
+language:
+- SystemVerilog
+license:
+  expression: BSD-3-Clause
+  scope: Selected source file; dependencies and generated outputs may differ.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://github.com/RedPitaya/RedPitaya-FPGA/blob/728a4f37e9c0a9b5ba1d9b7a0d44c38bbd2dc674/rtl/rtl/scope_dec_avg.sv
+    revision: 728a4f37e9c0a9b5ba1d9b7a0d44c38bbd2dc674
+    accessed: '2026-09-26'
+    scope: rtl/rtl/scope_dec_avg.sv
+    details: Inspected source API, imports/dependencies and implementation structure; not executed.
+interfaces:
+- fixed-point samples
+fpga_families:
+- name: Zynq-7000
+  status: claimed
+  scope: Red Pitaya platform association; no independent family-wide portability claim.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/RedPitaya/RedPitaya-FPGA/blob/728a4f37e9c0a9b5ba1d9b7a0d44c38bbd2dc674/README.md
+    revision: 728a4f37e9c0a9b5ba1d9b7a0d44c38bbd2dc674
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Red Pitaya platform association; no independent family-wide portability claim.
+toolchains: []
+reuse_scope: platform
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source-level API and integration reviewed; completeness for a specific application remains
+    unqualified.
+  evidence:
+  - *id001
+documentation:
+  status: present
+  summary: Source API and repository documentation available; inspect linked parameters and dependencies
+    before reuse.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/RedPitaya/RedPitaya-FPGA/blob/728a4f37e9c0a9b5ba1d9b7a0d44c38bbd2dc674/README.md
+    revision: 728a4f37e9c0a9b5ba1d9b7a0d44c38bbd2dc674
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Documentation/source API reviewed; no numerical quality score assigned.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_testbench:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  self_checking_testbench:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_ci:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  synthesis:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+verification_frameworks: []
+limitations:
+- kind: unsupported_mode
+  summary: Source TODOs flag TLAST loss during decimation and incomplete TKEEP handling; packet-preserving
+    streaming is not established.
+  evidence:
+  - *id001
+our_usage: []
+rejected_for: []
+selection:
+  status: reference_only
+  reason: Integration/architecture reference; constraints require review before reuse.
+  evidence:
+  - type: our_review
+    url: https://github.com/RedPitaya/RedPitaya-FPGA/blob/728a4f37e9c0a9b5ba1d9b7a0d44c38bbd2dc674/rtl/rtl/scope_dec_avg.sv
+    revision: 728a4f37e9c0a9b5ba1d9b7a0d44c38bbd2dc674
+    accessed: '2026-09-26'
+    scope: rtl/rtl/scope_dec_avg.sv
+    details: Integration/architecture reference; constraints require review before reuse.
+reviewed_at: '2026-09-26'

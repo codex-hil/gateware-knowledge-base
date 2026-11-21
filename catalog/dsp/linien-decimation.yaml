@@ -1,0 +1,142 @@
+schema_version: 1
+kind: ip
+id: linien-decimation
+name: linien-decimation
+project: linien
+upstream_path: gateware/logic/decimation.py
+summary: Sample decimation logic for acquisition and lock control.
+category: dsp
+tags:
+- decimation
+- acquisition
+language:
+- Python/Migen
+license:
+  expression: GPL-3.0-or-later
+  scope: Selected source file; dependencies and generated outputs may differ.
+  evidence:
+  - &id001
+    type: source_inspection
+    url: https://github.com/linien-org/linien/blob/6caa6a9f13189528025317969292f70b7ffbd484/gateware/logic/decimation.py
+    revision: 6caa6a9f13189528025317969292f70b7ffbd484
+    accessed: '2026-09-26'
+    scope: gateware/logic/decimation.py
+    details: Inspected source API, imports/dependencies and implementation structure; not executed.
+interfaces:
+- fixed-point samples
+fpga_families:
+- name: Zynq-7000
+  status: claimed
+  scope: Red Pitaya platform association; no independent family-wide portability claim.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/linien-org/linien/blob/6caa6a9f13189528025317969292f70b7ffbd484/README.md
+    revision: 6caa6a9f13189528025317969292f70b7ffbd484
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Red Pitaya platform association; no independent family-wide portability claim.
+toolchains: []
+reuse_scope: ecosystem
+lifecycle: evaluated
+completeness:
+  status: present
+  summary: Source-level API and integration reviewed; completeness for a specific application remains
+    unqualified.
+  evidence:
+  - *id001
+documentation:
+  status: present
+  summary: Source API and repository documentation available; inspect linked parameters and dependencies
+    before reuse.
+  evidence:
+  - type: source_inspection
+    url: https://github.com/linien-org/linien/blob/6caa6a9f13189528025317969292f70b7ffbd484/README.md
+    revision: 6caa6a9f13189528025317969292f70b7ffbd484
+    accessed: '2026-09-26'
+    scope: README.md
+    details: Documentation/source API reviewed; no numerical quality score assigned.
+verification:
+  source:
+    status: present
+    summary: Pinned source inspected.
+    evidence:
+    - *id001
+  elaboration:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_testbench:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  self_checking_testbench:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  simulation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  formal:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  upstream_ci:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  synthesis:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  place_and_route:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  bitstream:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  hardware_smoke:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  functional_hil:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  independent_validation:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+  production_deployment:
+    status: unknown
+    summary: Not established in this inspection.
+    evidence: []
+verification_frameworks: []
+limitations:
+- kind: architecture
+  summary: Gateware depends on Migen/MiSoC and Linien fixed-point/control conventions; system lock algorithms
+    also involve software.
+  evidence:
+  - type: our_review
+    url: https://github.com/linien-org/linien/blob/6caa6a9f13189528025317969292f70b7ffbd484/gateware/logic/decimation.py
+    revision: 6caa6a9f13189528025317969292f70b7ffbd484
+    accessed: '2026-09-26'
+    scope: gateware/logic/decimation.py
+    details: Engineering interpretation from the cited source; application fit requires review.
+our_usage: []
+rejected_for: []
+selection:
+  status: candidate
+  reason: Candidate for requirements-specific evaluation; no MODULIQ/AI-HIL adoption or validation is
+    claimed.
+  evidence:
+  - type: our_review
+    url: https://github.com/linien-org/linien/blob/6caa6a9f13189528025317969292f70b7ffbd484/gateware/logic/decimation.py
+    revision: 6caa6a9f13189528025317969292f70b7ffbd484
+    accessed: '2026-09-26'
+    scope: gateware/logic/decimation.py
+    details: Candidate for requirements-specific evaluation; no MODULIQ/AI-HIL adoption or validation
+      is claimed.
+reviewed_at: '2026-09-26'
