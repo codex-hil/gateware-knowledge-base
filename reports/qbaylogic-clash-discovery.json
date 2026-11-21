@@ -1,0 +1,51 @@
+{
+  "reviewed_at": "2026-11-21",
+  "kind": "discovery-review",
+  "article": {
+    "url": "https://qbaylogic.com/blog/reusing-fpga-designs/",
+    "published": "2026-11-16",
+    "provenance": "upstream_claim",
+    "summary": "QBayLogic introduces Clash Cores reusable blocks and Clash Protocols typed composition. Article claims reuse and compiler checks improve reliability; it says the Ethernet stack is not yet merged."
+  },
+  "projects": [
+    {
+      "repository": "https://github.com/clash-lang/clash-cores",
+      "revision": "34b87f12fa5e09b477905552b32d747cabaabec3",
+      "inspected_file": "README.md",
+      "evidence_url": "https://github.com/clash-lang/clash-cores/blob/34b87f12fa5e09b477905552b32d747cabaabec3/README.md",
+      "sha256": "9597ef81c7e103e8e3e4b981646b87dec65fdb88195dd7b3a62f56bb449b2b91",
+      "license_status": "Not audited; GitHub NOASSERTION is not evidence that the project lacks a license."
+    },
+    {
+      "repository": "https://github.com/clash-lang/clash-protocols",
+      "revision": "4b1635ebd1a32a3ad08a6a4a3a8108d646791de7",
+      "inspected_file": "README.md",
+      "evidence_url": "https://github.com/clash-lang/clash-protocols/blob/4b1635ebd1a32a3ad08a6a4a3a8108d646791de7/README.md",
+      "sha256": "1619ce128d60693a8b6a0a257516e53779affa6c7cab1dfe814344a3bb4a783f",
+      "license_status": "Not audited; GitHub NOASSERTION is not evidence that the project lacks a license."
+    }
+  ],
+  "qualification": "Discovery and README review only; no leaf implementation, license audit, simulation, synthesis or hardware result. Not counted as catalogued IP.",
+  "next_steps": [
+    "Inspect individual SPI/UART/CRC/Etherbone/8b10b/SGMII implementations and matching tests.",
+    "Audit component/dependency licenses and pin compiler/library versions.",
+    "Separate typed interface checks, behavioral properties, HDL simulations and hardware evidence."
+  ],
+  "limitations": [
+    {
+      "project": "clash-protocols",
+      "summary": "README describes Df invariants checked where possible by Hedgehog harnesses. Type compatibility is not evidence of complete temporal protocol correctness.",
+      "evidence": "https://github.com/clash-lang/clash-protocols/blob/4b1635ebd1a32a3ad08a6a4a3a8108d646791de7/README.md"
+    },
+    {
+      "project": "clash-protocols",
+      "summary": "README TODOs include AXI4 simulation and AXI4-Lite stallC tests; TODO text alone does not establish current source coverage.",
+      "evidence": "https://github.com/clash-lang/clash-protocols/blob/4b1635ebd1a32a3ad08a6a4a3a8108d646791de7/README.md"
+    },
+    {
+      "project": "clash-cores",
+      "summary": "README marks construction/migration in progress. SGMII requires clash-prelude >= 1.9.0 and is skipped with older versions.",
+      "evidence": "https://github.com/clash-lang/clash-cores/blob/34b87f12fa5e09b477905552b32d747cabaabec3/README.md"
+    }
+  ]
+}
